@@ -1,22 +1,94 @@
 ---
 import "../css/styles.css";
+import favicon from "../img/syff-favicon.svg";
+import sharing from "../img/syff-social-share.png";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
-
-const pageTitle = "Astro Blog";
+import Social from "../components/Social.astro";
+import Swiper from "../components/Swiper.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<Navigation />
-		<h1>{pageTitle}</h1>
-		<Footer />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Scottish Youth Film Foundation</title>
+    <meta
+      name="description"
+      content="The Scottish Youth Film Foundation is a charity that aims to improve the life outcomes of young people in Scotland through film. We do this through our annual festival, through film education in schools, and through Outreach film projects that target young people who would not normally have an opportunity to make a film."
+    />
+    <meta
+      property="og:description"
+      content="The Scottish Youth Film Foundation is a charity that aims to improve the life outcomes of young people in Scotland through film. We do this through our annual festival, through film education in schools, and through Outreach film projects that target young people who would not normally have an opportunity to make a film."
+    />
+    <meta property="og:image" content={sharing} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Scottish Youth Film Foundation" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:site_name" content="Scottish Youth Film Foundation" />
+    <meta property="og:title" content="Scottish Youth Film Foundation" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://syff.scot" />
+    <link rel="canonical" href="https://syff.scot/" />
+
+    <link rel="icon" type="image/svg+xml" href={favicon} />
+    <meta name="generator" content={Astro.generator} />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"
+    ></script>
+  </head>
+  <body>
+    <Navigation />
+    <Swiper />
+    <hgroup class="container">
+      <h1>Improving the life outcomes of young Scots through film</h1>
+      <p>
+        Learning through film and learning using film allows young people to get
+        to grips with the main form of communication in the 21st century. It
+        unlocks the literacy of film and moving image allowing young people to
+        understand how to interpret a film text. It’s the ABCs of visual
+        storytelling. Learners are encouraged to discuss and interrogate
+        different texts, such as adverts, clips, short films and features and to
+        go on to produce their own work using this knowledge.
+      </p>
+
+      <p>
+        All of our work in schools and during outreach projects allows this
+        interaction. For young people who are interested in taking this further,
+        we can offer pathways to further learning and directly to industry. Many
+        of the young people we work with go on to pursue creative careers. Our
+        work allows young people to safely explore these options with the
+        support of SYFF.
+      </p>
+
+      <p>
+        We are proud to be supported by The Sean Connery Foundation. The Sean
+        Connery Foundation grant increases operational capacity, allowing SYFF
+        to expand screen education efforts in three areas of focus: film
+        education in schools, film outreach projects that reach students in need
+        and the execution of their annual youth film festival.
+      </p>
+    </hgroup>
+
+    <div style="padding:56.25% 0 0 0;position:relative;" class="container">
+      <iframe
+        src="https://player.vimeo.com/video/787998256?h=644559c1c9&badge=0&autopause=0&player_id=0&app_id=58479"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        style="position:absolute;top:0;left:0;width:100%;height:100%;"
+        title="The Story of SYFF - Captioned"></iframe>
+    </div><script src="https://player.vimeo.com/api/player.js"></script>
+    <Footer />
+  </body>
 </html>

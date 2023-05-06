@@ -1,14 +1,7 @@
 ---
-const { platform, username } = Astro.props;
+import sprites from "../img/syff-sprites.svg";
 ---
 
-<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
-
-<style>
-  a {
-    padding: 0.5rem 1rem;
-    color: white;
-    background-color: #4c1d95;
-    text-decoration: none;
-  }
-</style>
+<svg class="icon">
+  <use xlink:href={`${sprites}#instagram`}></use>
+</svg>

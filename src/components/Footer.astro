@@ -1,17 +1,36 @@
 ---
-import Social from "./Social.astro";
+import favicon from "../img/syff-favicon.svg";
 ---
 
-<footer>
-  <Social platform="twitter" username="astrodotbuild" />
-  <Social platform="github" username="withastro" />
-  <Social platform="youtube" username="astrodotbuild" />
+<footer class="site-footer container">
+  <div>
+    Copyright © <span id="copyright-year">2000</span> Scottish Youth Film Foundation.
+    All rights reserved.
+  </div>
+  <img
+    src={favicon}
+    width="64"
+    height="64"
+    alt="Scottish Youth Film Foundation"
+  />
 </footer>
 
 <style>
-  footer {
+  .site-footer {
+    --container-pad: 2rem;
+    background-color: var(--color-grey);
+    color: var(--color-white);
+    font-weight: 500;
+    position: sticky;
+    top: 100%;
     display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
+    align-items: center;
+    justify-content: space-between;
   }
 </style>
+
+<script>
+  document.getElementById("copyright-year").innerHTML = new Date()
+    .getFullYear()
+    .toString();
+</script>

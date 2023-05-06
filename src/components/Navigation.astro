@@ -1,6 +1,116 @@
 ---
+import logo from "../img/syff-logo.svg";
+const pages = ["about", "blog", "photos", "contact"];
 ---
 
-<a href="/">Homer</a>
-<a href="/about/">About</a>
-<a href="/blog/">Blog</a>
+<nav class="site-navigation container">
+  <a href="/"
+    ><img
+      src={logo}
+      width="160"
+      height="64"
+      alt="Scottish Youth Film Foundation"
+    /></a
+  >
+  <ul>
+    {
+      pages.map((page) => (
+        <li>
+          <a href={page}>{page}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style>
+  .site-navigation {
+    --container-pad: 0;
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 1rem rgba(0 0 0 / 30%);
+    position: relative;
+    z-index: 10;
+  }
+
+  .site-navigation img {
+    height: auto;
+    max-width: 10rem;
+  }
+
+  .site-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .site-navigation li {
+    display: block;
+    text-align: center;
+  }
+
+  .site-navigation li a {
+    color: var(--color-ink);
+    display: block;
+    padding: 2.25rem 1.25rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.875rem;
+    position: relative;
+    transition: color var(--transition-time) ease,
+      background-color var(--transition-time) ease;
+    background-color: var(--color-white);
+  }
+
+  .site-navigation li a::after {
+    content: "";
+    background: var(--color-grey);
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 2rem;
+    left: 0;
+    top: 1.75rem;
+    z-index: 10;
+  }
+
+  .site-navigation li:first-of-type a::after {
+    background: transparent;
+  }
+
+  .site-navigation li a:focus-within,
+  .site-navigation li a:hover {
+    color: var(--color-white);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    background-color: var(--color-teal);
+    outline: 0;
+  }
+
+  .site-navigation li a:focus-within::after,
+  .site-navigation li a:hover::after {
+    background: transparent;
+  }
+
+  .site-navigation [aria-current="page"] {
+    border-bottom: 2px solid var(--color-teal);
+  }
+</style>
+
+<script>
+  setCurrentPage(".site-navigation li a");
+
+  function setCurrentPage(els) {
+    const path = window.location.href;
+    const links = document.querySelectorAll(els);
+    links.forEach((link) => {
+      if (link.href == path) {
+        link.setAttribute("aria-current", "page");
+      }
+    });
+  }
+</script>
