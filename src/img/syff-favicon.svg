@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #9c3;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #399;
+      }
+
+      .cls-3 {
+        fill: #8a2be2;
+      }
+    </style>
+  </defs>
+  <path id="pie_west" data-name="pie west" class="cls-1" d="M36.462,51.74l76.379,76.379L36.462,204.5C-1.728,166.308-1.728,89.929,36.462,51.74Z"/>
+  <path id="pie_south" data-name="pie south" class="cls-2" d="M51.738,219.773l76.379-76.379L204.5,219.773C166.306,257.963,89.927,257.963,51.738,219.773Z"/>
+  <path id="pie_east" data-name="pie east" class="cls-1" d="M219.771,204.5l-76.379-76.379L219.771,51.74C257.961,89.929,257.961,166.308,219.771,204.5Z"/>
+  <path id="pie_north" data-name="pie north" class="cls-3" d="M204.5,36.464l-76.379,76.379L51.738,36.464C89.927-1.725,166.306-1.726,204.5,36.464Z"/>
+</svg>
