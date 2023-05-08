@@ -1,0 +1,110 @@
+---
+import "../css/styles.css";
+import favicon from "../img/syff-favicon.svg";
+import sharing from "../img/syff-social-share.png";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Education</title>
+    <meta
+      name="description"
+      content="The Scottish Youth Film Foundation is a charity that aims to improve the life outcomes of young people in Scotland through film. We do this through our annual festival, through film education in schools, and through Outreach film projects that target young people who would not normally have an opportunity to make a film."
+    />
+    <meta
+      property="og:description"
+      content="The Scottish Youth Film Foundation is a charity that aims to improve the life outcomes of young people in Scotland through film. We do this through our annual festival, through film education in schools, and through Outreach film projects that target young people who would not normally have an opportunity to make a film."
+    />
+    <meta property="og:image" content={sharing} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Scottish Youth Film Foundation" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:site_name" content="Scottish Youth Film Foundation" />
+    <meta property="og:title" content="Education" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://syff.scot/history" />
+    <link rel="canonical" href="https://syff.scot/history" />
+
+    <link rel="icon" type="image/svg+xml" href={favicon} />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <Navigation />
+    <section class="container">
+      <h1>Education</h1>
+
+      <p>
+        We have a long track record of working in schools and in 2019, SYFF ran
+        a pilot project in Clackmannanshire to showcase how film in the
+        classroom can improve literacy and several other markers in education.
+        The project was a huge success and a film and written report are
+        available from SYFF upon request.
+      </p>
+
+      <p>
+        SYFF tutors will work in a classroom setting to teach both the pupils
+        and the teachers how film can be effectively used in the classroom.
+        Lessons cover film analysis and work towards pupils producing their own
+        work using tablets and class resources.
+      </p>
+    </section>
+
+    <section class="container">
+      <blockquote class="blockquote">
+        “The whole experience has been fantastic – not only for the children But
+        for my own development. I’ve always used media and technology In the
+        classroom but never as effectively as I will in the future.”
+        <span>Beverley Donald, P7 teacher, Clackmannan Primary School</span>
+      </blockquote>
+
+      <blockquote class="blockquote">
+        “ This project broke down barriers to literacy for all our learners
+        regardless of their abilities. They enjoyed storytelling and film making
+        and were amazed by what they achieved.”
+        <span
+          >Jill Henderson, Teacher Special Educational Needs, Lochies School
+        </span>
+      </blockquote>
+
+      <blockquote class="blockquote">
+        “I have never seen my class so engaged in a project. It was also
+        training for me and gave me tools to use in the classroom. I have
+        planned my reading project in a completely different way.”
+        <span>Claire Hume, P6 Teacher, Banchory Primary School</span>
+      </blockquote>
+
+      <blockquote class="blockquote">
+        “The whole thing was fun, the whole experience.”
+        <span>Young person, Kirkpatrick Fleming</span>
+      </blockquote>
+
+      <blockquote class="blockquote">
+        “We watch movies entirely differently now.”
+        <span>Young person, Banchory</span>
+      </blockquote>
+
+      <blockquote class="blockquote">
+        “I’m probably engaging more with it because I actually know how to
+        describe it and to understand it more than I did before we started this
+        project.
+        <span>Young person, Alva</span>
+      </blockquote>
+
+      <p>Education Film</p>
+    </section>
+    <Footer />
+  </body>
+</html>

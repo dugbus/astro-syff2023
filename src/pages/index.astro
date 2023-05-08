@@ -4,11 +4,11 @@ import favicon from "../img/syff-favicon.svg";
 import sharing from "../img/syff-social-share.png";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
-import Social from "../components/Social.astro";
 import Swiper from "../components/Swiper.astro";
+import VideoEmbed from "../components/VideoEmbed.astro";
 ---
 
-<html lang="en">
+<html lang="en-GB">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -49,7 +49,9 @@ import Swiper from "../components/Swiper.astro";
   </head>
   <body>
     <Navigation />
+
     <Swiper />
+
     <hgroup class="container">
       <h1>Improving the life outcomes of young Scots through film</h1>
       <p>
@@ -80,15 +82,33 @@ import Swiper from "../components/Swiper.astro";
       </p>
     </hgroup>
 
-    <div style="padding:56.25% 0 0 0;position:relative;" class="container">
-      <iframe
-        src="https://player.vimeo.com/video/787998256?h=644559c1c9&badge=0&autopause=0&player_id=0&app_id=58479"
-        frameborder="0"
-        allow="autoplay; fullscreen; picture-in-picture"
-        allowfullscreen
-        style="position:absolute;top:0;left:0;width:100%;height:100%;"
-        title="The Story of SYFF - Captioned"></iframe>
-    </div><script src="https://player.vimeo.com/api/player.js"></script>
+    <section class="container">
+      <blockquote class="blockquote">
+        “My dad’s career in the film industry happened by accident and changed
+        the trajectory of his life. Discovering the crafts and trades of
+        filmmaking, beyond acting and directing, should not be reserved only for
+        the rich, well-connected or lucky ones. And, making and discerning
+        screen-based storytelling is nothing short of a vital 21st-century
+        skill. It builds creativity, agency and voice, project management skills
+        and empathy, to name just a few. Supporting SYFF, and screen education
+        more generally, as a focus of our foundation is an exciting and natural
+        expression of my father’s legacy that we hope will help to prepare the
+        young Scottish people for the future that lies ahead,”
+        <span>SYFF Patron Jason Connery</span>
+      </blockquote>
+    </section>
+
+    <section class="container">
+      <h2>
+        We are a film charity - so why just read about us when you can watch a
+        film?
+      </h2>
+
+      <VideoEmbed videoId="787998256" />
+
+      <VideoEmbed videoId="787999434" />
+    </section>
+
     <Footer />
   </body>
 </html>

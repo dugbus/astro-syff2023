@@ -1,13 +1,15 @@
 :root {
   --container-width: 90rem;
   --container-edge: 3rem;
-  --container-pad: 4rem;
+  --container-padding: 0;
+  --container-margin: 4rem;
 
   --color-ink: #1b203e;
   --color-light-grey: #f7f8f9;
   --color-grey: #dbdcd7;
   --color-teal: #399;
   --color-white: #fff;
+  --color-dark-blue: #092e48;
 
   --transition-time: 220ms;
 }
@@ -37,9 +39,45 @@ img {
 }
 
 .container {
-  padding: var(--container-pad) max(var(--container-edge), calc(50% - var(--container-width)/2));
+  padding: var(--container-padding) max(var(--container-edge), calc(50% - var(--container-width)/2));
+  margin: var(--container-margin) 0;
 }
 
 hgroup p {
   font-size: 1.125rem;
+}
+
+.blockquote {
+  font-size: 1.4em;
+  width: 60%;
+  margin: 50px auto;
+  font-style: italic;
+  color: #555555;
+  padding: 1.2em 30px 1.2em 75px;
+  border-left: 8px solid var(--color-teal);
+  line-height: 1.6;
+  position: relative;
+  background: #EDEDED;
+}
+
+.blockquote::before {
+  font-family: Arial;
+  content: "\201C";
+  color: var(--color-teal);
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+
+.blockquote::after {
+  content: '';
+}
+
+.blockquote span {
+  display: block;
+  color: #333333;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 1em;
 }
