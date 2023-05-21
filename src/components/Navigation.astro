@@ -16,25 +16,30 @@ import logo from "../img/syff-logo.svg";
       <a href="/">Home</a>
     </li>
     <li>
-      <a href="/history/">History</a>
+      <a href="/who-we-are/">Who We Are</a>
     </li>
     <li>
-      <a href="/cop-tv/">COP TV</a>
+      <a href="#">What We Do</a>
+      <ul>
+        <li>
+          <a href="/film-festival/">Film Festival</a>
+        </li>
+        <li>
+          <a href="/outreach/">Outreach</a>
+        </li>
+        <li>
+          <a href="/education/">Education</a>
+        </li>
+      </ul>
     </li>
     <li>
-      <a href="/the-festival/">The Festival</a>
+      <a href="/into-the-industry/">Into The Industry</a>
     </li>
     <li>
-      <a href="/outreach/">Outreach</a>
+      <a href="/news/">News</a>
     </li>
     <li>
-      <a href="/education/">Education</a>
-    </li>
-    <li>
-      <a href="/who-are-we/">Who Are We</a>
-    </li>
-    <li>
-      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
     </li>
   </ul>
 </nav>
@@ -103,7 +108,7 @@ import logo from "../img/syff-logo.svg";
   .site-navigation li a:hover {
     color: var(--color-white);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-    background-color: var(--color-teal);
+    background-color: var(--color-primary);
     outline: 0;
   }
 
@@ -113,7 +118,11 @@ import logo from "../img/syff-logo.svg";
   }
 
   .site-navigation [aria-current="page"] {
-    border-bottom: 2px solid var(--color-teal);
+    border-bottom: 2px solid var(--color-primary);
+  }
+
+  .site-navigation ul ul {
+    display: none;
   }
 </style>
 

@@ -6,6 +6,7 @@ import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import Swiper from "../components/Swiper.astro";
 import VideoEmbed from "../components/VideoEmbed.astro";
+import piechart from "../img/pie-chart.png";
 ---
 
 <html lang="en-GB">
@@ -107,6 +108,140 @@ import VideoEmbed from "../components/VideoEmbed.astro";
       <VideoEmbed videoId="787998256" />
 
       <VideoEmbed videoId="787999434" />
+    </section>
+
+    <section class="container">
+      <h2>What Do We Do?</h2>
+      <div class="grid">
+        <div>
+          <img
+            src="https://placehold.co/600x400"
+            width="600"
+            height="400"
+            alt="placholder"
+          />
+          <h3>Film Festival</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+            luctus posuere eros sed semper. Nulla nec dolor in elit tincidunt
+            pellentesque quis id massa. Praesent tincidunt dapibus elementum.
+          </p>
+          <a href="/film-festival/" class="btn">Learn More</a>
+        </div>
+        <div>
+          <img
+            src="https://placehold.co/600x400"
+            width="600"
+            height="400"
+            alt="placholder"
+          />
+          <h3>Outreach</h3>
+          <p>
+            Nulla euismod molestie elit a porta. In hac habitasse platea
+            dictumst. Class aptent taciti sociosqu ad litora torquent per
+            conubia nostra, per inceptos himenaeos.
+          </p>
+          <a href="/outreach/" class="btn">Learn More</a>
+        </div>
+        <div>
+          <img
+            src="https://placehold.co/600x400"
+            width="600"
+            height="400"
+            alt="placholder"
+          />
+          <h3>Education</h3>
+          <p>
+            Aliquam fermentum faucibus arcu, et ornare nisi. Phasellus nec
+            egestas velit. Mauris fringilla nulla ipsum, et pellentesque sem
+            cursus quis. Ad litora torquent per conubia nostra.
+          </p>
+          <a href="/education/" class="btn">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="container"
+      style="background-color: var(--color-grey); --container-padding: 3rem;"
+    >
+      <div class="stats">
+        <div>
+          <h2>Impact</h2>
+          <p>
+            Vestibulum ultricies metus ut ligula vestibulum, a dictum nisl
+            elementum. Donec sed mauris in nisi efficitur placerat a ac massa.
+            Fusce consectetur justo fermentum mauris mattis aliquam non vel
+            odio. Mauris ultricies erat ut arcu ornare, ac efficitur urna
+            maximus. Pellentesque in nibh id neque dictum tincidunt.
+          </p>
+        </div>
+        <div>
+          <img src={piechart} />
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2 class="text-center">Testimonials</h2>
+      <div class="grid testimonials">
+        <div>
+          <img
+            src="https://placehold.co/400x400"
+            width="400"
+            height="400"
+            alt="placholder"
+          />
+          <h3>Elsa Giles</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+            luctus posuere eros sed semper. Nulla nec dolor in elit tincidunt
+            pellentesque quis id massa. Praesent tincidunt dapibus elementum.
+          </p>
+        </div>
+        <div>
+          <img
+            src="https://placehold.co/400x400"
+            width="400"
+            height="400"
+            alt="placholder"
+          />
+          <h3>Yasmin Downs</h3>
+          <p>
+            Nulla euismod molestie elit a porta. In hac habitasse platea
+            dictumst. Class aptent taciti sociosqu ad litora torquent per
+            conubia nostra, per inceptos himenaeos.
+          </p>
+        </div>
+        <div>
+          <img
+            src="https://placehold.co/400x400"
+            width="400"
+            height="400"
+            alt="placholder"
+          />
+          <h3>Isaac Harrison</h3>
+          <p>
+            Aliquam fermentum faucibus arcu, et ornare nisi. Phasellus nec
+            egestas velit. Mauris fringilla nulla ipsum, et pellentesque sem
+            cursus quis.
+          </p>
+        </div>
+        <div>
+          <img
+            src="https://placehold.co/400x400"
+            width="400"
+            height="400"
+            alt="placholder"
+          />
+          <h3>Tim Roth</h3>
+          <p>
+            Aliquam fermentum faucibus arcu, et ornare nisi. Phasellus nec
+            egestas velit. Mauris fringilla nulla ipsum, et pellentesque sem
+            cursus quis.
+          </p>
+        </div>
+      </div>
     </section>
 
     <Footer />
