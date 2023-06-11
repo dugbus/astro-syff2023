@@ -1,8 +1,9 @@
 ---
 import logo from "../img/syff-logo.svg";
+import sprites from "../img/syff-sprites.svg";
 ---
 
-<nav class="site-navigation container">
+<nav>
   <a href="/"
     ><img
       src={logo}
@@ -16,13 +17,45 @@ import logo from "../img/syff-logo.svg";
       <a href="/">Home</a>
     </li>
     <li>
-      <a href="/who-we-are/">Who We Are</a>
+      <a href="/news/">News</a>
     </li>
-    <li>
-      <a href="#">What We Do</a>
+    <li class="dropdown">
+      <a href="javascript:;"
+        >Who We Are <svg class="icon">
+          <use xlink:href={`${sprites}#down-arrow`}></use>
+        </svg></a
+      >
       <ul>
         <li>
-          <a href="/film-festival/">Film Festival</a>
+          <a href="/history/">History of SYFF</a>
+        </li>
+        <li>
+          <a href="/story/">Story of SYFF</a>
+        </li>
+        <li>
+          <a href="/staff/" onclick="
+          console.log('staff')
+          "
+            >Staff</a
+          >
+        </li>
+        <li>
+          <a href="/board/">Board</a>
+        </li>
+        <li>
+          <a href="/patrons/">Patrons</a>
+        </li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:;"
+        >What We Do <svg class="icon">
+          <use xlink:href={`${sprites}#down-arrow`}></use>
+        </svg></a
+      >
+      <ul>
+        <li>
+          <a href="/festival/">Festival</a>
         </li>
         <li>
           <a href="/outreach/">Outreach</a>
@@ -36,17 +69,17 @@ import logo from "../img/syff-logo.svg";
       <a href="/into-the-industry/">Into The Industry</a>
     </li>
     <li>
-      <a href="/news/">News</a>
-    </li>
-    <li>
       <a href="/contact/">Contact</a>
     </li>
   </ul>
 </nav>
 
 <style>
-  .site-navigation {
+  nav {
     --container-margin: 0;
+    padding: var(--container-padding)
+      max(var(--container-edge), calc(50% - var(--container-width) / 2));
+    margin: var(--container-margin) 0;
     background-color: var(--color-white);
     display: flex;
     align-items: center;
@@ -56,24 +89,24 @@ import logo from "../img/syff-logo.svg";
     z-index: 10;
   }
 
-  .site-navigation img {
+  nav img {
     height: auto;
     max-width: 10rem;
   }
 
-  .site-navigation ul {
+  nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
   }
 
-  .site-navigation li {
+  nav li {
     display: block;
     text-align: center;
   }
 
-  .site-navigation li a {
+  nav li a {
     color: var(--color-ink);
     display: block;
     padding: 2.25rem 1.25rem;
@@ -86,9 +119,10 @@ import logo from "../img/syff-logo.svg";
     transition: color var(--transition-time) ease,
       background-color var(--transition-time) ease;
     background-color: var(--color-white);
+    white-space: nowrap;
   }
 
-  .site-navigation li a::after {
+  nav li a::after {
     content: "";
     background: var(--color-grey);
     display: block;
@@ -100,34 +134,56 @@ import logo from "../img/syff-logo.svg";
     z-index: 10;
   }
 
-  .site-navigation li:first-of-type a::after {
+  nav li:first-of-type a::after {
     background: transparent;
   }
 
-  .site-navigation li a:focus-within,
-  .site-navigation li a:hover {
+  nav li a:focus-within,
+  nav li a:hover {
     color: var(--color-white);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
     background-color: var(--color-primary);
     outline: 0;
   }
 
-  .site-navigation li a:focus-within::after,
-  .site-navigation li a:hover::after {
+  nav li a:focus-within::after,
+  nav li a:hover::after {
     background: transparent;
   }
 
-  .site-navigation [aria-current="page"] {
-    border-bottom: 2px solid var(--color-primary);
+  .dropdown {
+    position: relative;
   }
 
-  .site-navigation ul ul {
+  .dropdown svg {
+    height: 0.61255rem;
+    width: 0.75rem;
+    margin-left: 0.25rem;
+  }
+
+  .dropdown ul {
+    position: absolute;
     display: none;
+    box-shadow: 0 0 1rem rgba(0 0 0 / 30%);
+    padding: 0;
+  }
+
+  .dropdown li a {
+    padding: 1.25rem 1.25rem;
+  }
+
+  .dropdown li a::after {
+    background: transparent;
+  }
+
+  .dropdown:focus-within ul,
+  .dropdown ul:focus-within {
+    display: block;
   }
 </style>
 
 <script>
-  setCurrentPage(".site-navigation li a");
+  setCurrentPage("nav a");
 
   function setCurrentPage(els) {
     const path = window.location.href;

@@ -131,7 +131,7 @@ hgroup p {
 .grid {
   display: grid;
   gap: var(--grid-gap);
-  grid-template-columns: repeat(auto-fill, minmax(min(var(--grid-size), 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(var(--grid-size), 100%), 1fr));
 }
 
 .stats {
