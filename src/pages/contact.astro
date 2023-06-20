@@ -4,6 +4,7 @@ import favicon from "../img/syff-favicon.svg";
 import sharing from "../img/syff-social-share.png";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
+import Font from "../components/Font.astro";
 ---
 
 <html lang="en-GB">
@@ -11,14 +12,9 @@ import Footer from "../components/Footer.astro";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Poppins:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
+    <Font />
 
-    <title>History of SYFF</title>
+    <title>Contact SYFF</title>
     <meta
       name="description"
       content="The Scottish Youth Film Foundation is a charity that aims to improve the life outcomes of young people in Scotland through film. We do this through our annual festival, through film education in schools, and through Outreach film projects that target young people who would not normally have an opportunity to make a film."
@@ -33,26 +29,30 @@ import Footer from "../components/Footer.astro";
     <meta property="og:image:alt" content="Scottish Youth Film Foundation" />
     <meta property="og:locale" content="en_GB" />
     <meta property="og:site_name" content="Scottish Youth Film Foundation" />
-    <meta property="og:title" content="History of SYFF" />
+    <meta property="og:title" content="Contact SYFF" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://syff.scot/history" />
-    <link rel="canonical" href="https://syff.scot/history" />
+    <meta property="og:url" content="https://syff.scot/contact" />
+    <link rel="canonical" href="https://syff.scot/contact" />
 
     <link rel="icon" type="image/svg+xml" href={favicon} />
     <meta name="generator" content={Astro.generator} />
   </head>
-  <body>
+  <body id="top">
     <Navigation />
-    <section class="container">
-      <h1>Contact</h1>
 
-      <p>Contact form here.</p>
-    </section>
-    <section class="container">
-      <h2 class="text-center">Social Media</h2>
+    <main id="content">
+      <section class="container">
+        <h1>Contact</h1>
 
-      <p>Social links here.</p>
-    </section>
+        <p>Contact form here.</p>
+      </section>
+      <section class="container">
+        <h2 class="text-center">Social Media</h2>
+
+        <p>Social links here.</p>
+      </section>
+    </main>
+
     <Footer />
   </body>
 </html>

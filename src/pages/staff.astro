@@ -4,6 +4,7 @@ import favicon from "../img/syff-favicon.svg";
 import sharing from "../img/syff-social-share.png";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
+import Font from "../components/Font.astro";
 ---
 
 <html lang="en-GB">
@@ -11,12 +12,7 @@ import Footer from "../components/Footer.astro";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Poppins:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
+    <Font />
 
     <title>Staff</title>
     <meta
@@ -33,44 +29,87 @@ import Footer from "../components/Footer.astro";
     <meta property="og:image:alt" content="Scottish Youth Film Foundation" />
     <meta property="og:locale" content="en_GB" />
     <meta property="og:site_name" content="Scottish Youth Film Foundation" />
-    <meta property="og:title" content="The Festival" />
+    <meta property="og:title" content="Staff" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://syff.scot/cop-tv" />
-    <link rel="canonical" href="https://syff.scot/cop-tv" />
+    <meta property="og:url" content="https://syff.scot/staff" />
+    <link rel="canonical" href="https://syff.scot/staff" />
 
     <link rel="icon" type="image/svg+xml" href={favicon} />
     <meta name="generator" content={Astro.generator} />
   </head>
-  <body>
+  <body id="top">
     <Navigation />
 
-    <section class="container">
-      <h1>Staff</h1>
-      <h2>David Barras</h2>
-      <p>
-        I was born and brought up in Armadale, West Lothian and have been
-        involved in education and media production since 1993. Film was a big
-        part of my childhood but it seemed outwith the grasp of anyone coming
-        from West Lothian. I’ve now been making and teaching about film for over
-        30 years and have been lucky enough to make music videos, documentaries,
-        shorts and a feature. Film is a great way to teach important life skills
-        and and being able to analyse film is vital for everybody.
-      </p>
-      <h2>Scott Mackay</h2>
-      <p>
-        I too grew up in Armadale and always, always, always wanted to tell
-        stories. It started with the old school Dungeons and Dragons for my pals
-        (including David) and I was hooked on making words come alive ever since
-        that time. But no one, not even our parents ever encouraged us to follow
-        that as a career. I am also addicted to talking - I'll start a monologue
-        for my fellow passengers at a bus stop - and so I even enjoy the
-        meetings and all the other things we have to do but they don't compare
-        to being with young people and exploring their story, watching it come
-        alive in their minds before we even get a camera out.
-      </p>
-      <h2>Heather Bowery</h2>
-      <p>TBC</p>
-    </section>
+    <main id="content">
+      <section class="container">
+        <h1>Staff</h1>
+
+        <div class="staff">
+          <div>
+            <img src="../img/dave.jpg" alt="David Barras" />
+          </div>
+          <div>
+            <h2>David Barras</h2>
+            <h3>Co-Founder/Executive Director</h3>
+            <p>
+              I was born and brought up in Armadale, West Lothian and have been
+              involved in education and media production since 1993. Film was a
+              big part of my childhood but it seemed outwith the grasp of anyone
+              coming from West Lothian. I&rsquo;ve now been making and teaching
+              about film for over 30 years and have been lucky enough to make
+              music videos, documentaries, shorts and a feature. Film is a great
+              way to teach important life skills and and being able to analyse
+              film is vital for everybody.
+            </p>
+          </div>
+        </div>
+
+        <div class="staff">
+          <div>
+            <img src="../img/scott.jpg" alt="Scott Mackay" />
+          </div>
+          <div>
+            <h2>Scott Mackay</h2>
+            <h3>Co-Founder/Executive Director</h3>
+            <p>
+              I too grew up in Armadale and always, always, always wanted to
+              tell stories. It started with the old school Dungeons and Dragons
+              for my pals (including David) and I was hooked on making words
+              come alive ever since that time. But no one, not even our parents
+              ever encouraged us to follow that as a career. I am also addicted
+              to talking - I'll start a monologue for my fellow passengers at a
+              bus stop - and so I even enjoy the meetings and all the other
+              things we have to do but they don't compare to being with young
+              people and exploring their story, watching it come alive in their
+              minds before we even get a camera out.
+            </p>
+          </div>
+        </div>
+
+        <div class="staff">
+          <div>
+            <img src="../img/heather.jpg" alt="Heather Bowery" />
+          </div>
+          <div>
+            <h2>Heather Bowery</h2>
+            <h3>General Manager</h3>
+            <p>
+              Making films is something I have been doing since I was a
+              teenager. Film is such a rich and diverse art form that offers a
+              whole world of skillsets and practices in which people can play
+              and explore. Initially, my route into film was through a love of
+              acting and I eventually found myself producing commercial video
+              projects in Canada before moving back to bonnie Scotland and
+              joining the team at SYFF. I find so much enjoyment in exploring
+              this great wide world of filmmaking and hope to encourage young
+              people to do the same to find their passion, their voice, learn
+              new skills… and make new friends and have loads of fun along the
+              way!
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <Footer />
   </body>

@@ -4,6 +4,7 @@ import favicon from "../img/syff-favicon.svg";
 import sharing from "../img/syff-social-share.png";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
+import Font from "../components/Font.astro";
 ---
 
 <html lang="en-GB">
@@ -11,12 +12,7 @@ import Footer from "../components/Footer.astro";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Poppins:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
+    <Font />
 
     <title>Outreach Projects</title>
     <meta
@@ -35,82 +31,87 @@ import Footer from "../components/Footer.astro";
     <meta property="og:site_name" content="Scottish Youth Film Foundation" />
     <meta property="og:title" content="Outreach Projects" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://syff.scot/cop-tv" />
-    <link rel="canonical" href="https://syff.scot/cop-tv" />
+    <meta property="og:url" content="https://syff.scot/outreach" />
+    <link rel="canonical" href="https://syff.scot/outreach" />
 
     <link rel="icon" type="image/svg+xml" href={favicon} />
     <meta name="generator" content={Astro.generator} />
   </head>
-  <body>
+  <body id="top">
     <Navigation />
-    <section class="container">
-      <h1>Outreach Projects</h1>
 
-      <p>
-        Outreach projects are where we work intensely with a group of young
-        people to produce a short film. Each Outreach project is different but
-        in general we will visit the group to run an Input day, where we look at
-        films, analyse what makes them work and talk about story and script.
-        We’ll then give some time for a script to be written and come back to
-        work with the group over the course of several days to produce and shoot
-        their film. All of the roles are taken by the young people, with SYFF
-        tutors on hand to guide the production. Once complete we have a
-        celebratory screening in the local community and each outreach film will
-        go on to be shown at our Festival.
-      </p>
+    <main id="content">
+      <section class="container">
+        <h1>Outreach Projects</h1>
 
-      <p>
-        Since inception, we have produced over 20 Outreach films with groups
-        from across Scotland and covering, drama and documentary.
-      </p>
+        <p>
+          Outreach projects are where we work intensely with a group of young
+          people to produce a short film. Each Outreach project is different but
+          in general we will visit the group to run an Input day, where we look
+          at films, analyse what makes them work and talk about story and
+          script. We&rsquo;ll then give some time for a script to be written and
+          come back to work with the group over the course of several days to
+          produce and shoot their film. All of the roles are taken by the young
+          people, with SYFF tutors on hand to guide the production. Once
+          complete we have a celebratory screening in the local community and
+          each outreach film will go on to be shown at our Festival.
+        </p>
 
-      <p>
-        Our outreach work is targeted specifically at young people who would not
-        normally get the chance to engage in creative film making activity.
-      </p>
-    </section>
+        <p>
+          Since inception, we have produced over 20 Outreach films with groups
+          from across Scotland and covering, drama and documentary.
+        </p>
 
-    <section class="container">
-      <blockquote class="blockquote">
-        “I loved the shooting days, because what we wrote became a reality.”
-        <span>Young person, Falkirk</span>
-      </blockquote>
+        <p>
+          Our outreach work is targeted specifically at young people who would
+          not normally get the chance to engage in creative film making
+          activity.
+        </p>
+      </section>
 
-      <blockquote class="blockquote">
-        “It just brought us all together. You kind of forget all the bad stuff
-        outside of this.”
-        <span>Young person, Inverclyde</span>
-      </blockquote>
+      <section class="container">
+        <blockquote class="blockquote">
+          “I loved the shooting days, because what we wrote became a reality.”
+          <span>Young person, Falkirk</span>
+        </blockquote>
 
-      <blockquote class="blockquote">
-        “It’s been really inspiring. The ideas they have came up with are
-        fantastic. Way beyond what we would have expected. It blew our socks
-        off”
-        <span>Youth Worker, Inverclyde</span>
-      </blockquote>
+        <blockquote class="blockquote">
+          “It just brought us all together. You kind of forget all the bad stuff
+          outside of this.”
+          <span>Young person, Inverclyde</span>
+        </blockquote>
 
-      <blockquote class="blockquote">
-        “There’s been a really great balance of hard work and fun. That’s been
-        managed fantastically.”
-        <span>Youth Worker, Inverclyde</span>
-      </blockquote>
+        <blockquote class="blockquote">
+          “It&rsquo;s been really inspiring. The ideas they have came up with
+          are fantastic. Way beyond what we would have expected. It blew our
+          socks off”
+          <span>Youth Worker, Inverclyde</span>
+        </blockquote>
 
-      <blockquote class="blockquote">
-        “Making a film was a privilege, it’s not something that happens
-        everyday. Some of us would never have gotten the opportunity to do this
-        and you’ve gave us that chance”
-        <span>Young person, Livingston</span>
-      </blockquote>
+        <blockquote class="blockquote">
+          “There&rsquo;s been a really great balance of hard work and fun.
+          That&rsquo;s been managed fantastically.”
+          <span>Youth Worker, Inverclyde</span>
+        </blockquote>
 
-      <blockquote class="blockquote">
-        “My favourite thing has been seeing the young people taking on different
-        parts in the film process, from acting, to doing sound, to doing camera
-        and seeing how they’ve developed over the week of the shoot.”
-        <span>Youth Support Worker, East Renfrewshire</span>
-      </blockquote>
+        <blockquote class="blockquote">
+          “Making a film was a privilege, it&rsquo;s not something that happens
+          everyday. Some of us would never have gotten the opportunity to do
+          this and you&rsquo;ve gave us that chance”
+          <span>Young person, Livingston</span>
+        </blockquote>
 
-      <p>Links - Outreach films</p>
-    </section>
+        <blockquote class="blockquote">
+          “My favourite thing has been seeing the young people taking on
+          different parts in the film process, from acting, to doing sound, to
+          doing camera and seeing how they&rsquo;ve developed over the week of
+          the shoot.”
+          <span>Youth Support Worker, East Renfrewshire</span>
+        </blockquote>
+
+        <p>Links - Outreach films</p>
+      </section>
+    </main>
 
     <Footer />
   </body>

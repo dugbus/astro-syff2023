@@ -1,22 +1,50 @@
 ---
 import favicon from "../img/syff-favicon.svg";
+import sprites from "../img/syff-sprites.svg";
 ---
 
-<footer class="site-footer container">
-  <div>
+<footer class="container">
+  <div class="social">
+    <a
+      href="https://www.instagram.com/scottishyouthfilmfoundation/?hl=en"
+      target="_blank"
+      ><svg class="icon">
+        <use xlink:href={`${sprites}#instagram`}></use>
+      </svg></a
+    >
+    <a href="https://twitter.com/thisissyff?lang=en" target="_blank"
+      ><svg class="icon">
+        <use xlink:href={`${sprites}#twitter`}></use>
+      </svg></a
+    >
+    <a
+      href="https://www.facebook.com/scottishyouthfilmfoundation/"
+      target="_blank"
+      ><svg class="icon">
+        <use xlink:href={`${sprites}#facebook`}></use>
+      </svg></a
+    >
+  </div>
+
+  <div class="copyright">
     Copyright © <span id="copyright-year">2000</span> Scottish Youth Film Foundation.
     All rights reserved.
   </div>
-  <img
-    src={favicon}
-    width="64"
-    height="64"
-    alt="Scottish Youth Film Foundation"
-  />
+
+  <div>
+    <a href="#top" title="back to top">
+      <img
+        src={favicon}
+        width="64"
+        height="64"
+        alt="Scottish Youth Film Foundation"
+      />
+    </a>
+  </div>
 </footer>
 
 <style>
-  .site-footer {
+  footer {
     --container-padding: 2rem;
     --container-margin: 0;
     background-color: var(--color-dark-blue);
@@ -27,6 +55,31 @@ import favicon from "../img/syff-favicon.svg";
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .copyright {
+    flex: 1;
+    text-align: center;
+  }
+
+  a {
+    display: inline-block;
+    opacity: 1;
+    transition: opacity var(--transition-time);
+  }
+
+  a:hover {
+    opacity: var(--hover-opacity);
+  }
+
+  .social a {
+    margin-right: 0.25rem;
+  }
+
+  svg {
+    fill: var(--color-light-grey);
+    width: 2rem;
+    height: 2rem;
   }
 </style>
 

@@ -33,11 +33,7 @@ import sprites from "../img/syff-sprites.svg";
           <a href="/story/">Story of SYFF</a>
         </li>
         <li>
-          <a href="/staff/" onclick="
-          console.log('staff')
-          "
-            >Staff</a
-          >
+          <a href="/staff/">Staff</a>
         </li>
         <li>
           <a href="/board/">Board</a>
@@ -76,10 +72,12 @@ import sprites from "../img/syff-sprites.svg";
 
 <style>
   nav {
-    --container-margin: 0;
-    padding: var(--container-padding)
-      max(var(--container-edge), calc(50% - var(--container-width) / 2));
-    margin: var(--container-margin) 0;
+    --container-padding: 0;
+    padding-inline: max(
+      var(--container-edge),
+      calc(50% - var(--container-width) / 2)
+    );
+    padding-block: var(--container-padding);
     background-color: var(--color-white);
     display: flex;
     align-items: center;
@@ -104,6 +102,7 @@ import sprites from "../img/syff-sprites.svg";
   nav li {
     display: block;
     text-align: center;
+    position: relative;
   }
 
   nav li a {
@@ -118,30 +117,31 @@ import sprites from "../img/syff-sprites.svg";
     position: relative;
     transition: color var(--transition-time) ease,
       background-color var(--transition-time) ease;
-    background-color: var(--color-white);
+    background-color: transparent;
     white-space: nowrap;
+    position: relative;
+    z-index: 1;
   }
 
-  nav li a::after {
+  nav li::after {
     content: "";
     background: var(--color-grey);
     display: block;
     position: absolute;
     width: 1px;
     height: 2rem;
-    left: 0;
+    right: 0;
     top: 1.75rem;
-    z-index: 10;
+    z-index: 0;
   }
 
-  nav li:first-of-type a::after {
+  nav li:last-of-type::after {
     background: transparent;
   }
 
   nav li a:focus-within,
   nav li a:hover {
     color: var(--color-white);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
     background-color: var(--color-primary);
     outline: 0;
   }
@@ -168,12 +168,16 @@ import sprites from "../img/syff-sprites.svg";
     padding: 0;
   }
 
-  .dropdown li a {
-    padding: 1.25rem 1.25rem;
+  .dropdown li {
+    background: var(--color-white);
   }
 
-  .dropdown li a::after {
+  .dropdown li::after {
     background: transparent;
+  }
+
+  .dropdown li a {
+    padding: 1.25rem 1.25rem;
   }
 
   .dropdown:focus-within ul,

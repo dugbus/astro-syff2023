@@ -4,7 +4,7 @@ import favicon from "../img/syff-favicon.svg";
 import sharing from "../img/syff-social-share.png";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
-import Swiper from "../components/Swiper.astro";
+import Font from "../components/Font.astro";
 import VideoEmbed from "../components/VideoEmbed.astro";
 import piechart from "../img/pie-chart.png";
 ---
@@ -14,12 +14,7 @@ import piechart from "../img/pie-chart.png";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Poppins:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
+    <Font />
 
     <title>Scottish Youth Film Foundation</title>
     <meta
@@ -48,203 +43,147 @@ import piechart from "../img/pie-chart.png";
       src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"
     ></script>
   </head>
-  <body>
+  <body id="top">
     <Navigation />
 
-    <Swiper />
+    <header class="hero">
+      <img
+        src="../img/header-home-desktop.jpg"
+        alt="Young people on our COP TV project"
+      />
+    </header>
 
-    <hgroup class="container">
-      <h1>Improving the life outcomes of young Scots through film</h1>
-      <p>
-        Learning through film and learning using film allows young people to get
-        to grips with the main form of communication in the 21st century. It
-        unlocks the literacy of film and moving image allowing young people to
-        understand how to interpret a film text. It’s the ABCs of visual
-        storytelling. Learners are encouraged to discuss and interrogate
-        different texts, such as adverts, clips, short films and features and to
-        go on to produce their own work using this knowledge.
-      </p>
+    <main id="content">
+      <hgroup class="container intro">
+        <h1 class="headline">
+          Improving the life outcomes of young Scots through film
+        </h1>
+        <p class="lede">
+          Learning through film and learning using film allows young people to
+          get to grips with the main form of communication in the 21st century.
+          It unlocks the literacy of film and moving image allowing young people
+          to understand how to interpret a film text. It&rsquo;s the ABCs of
+          visual storytelling. Learners are encouraged to discuss and
+          interrogate different texts, such as adverts, clips, short films and
+          features and to go on to produce their own work using this knowledge.
+        </p>
 
-      <p>
-        All of our work in schools and during outreach projects allows this
-        interaction. For young people who are interested in taking this further,
-        we can offer pathways to further learning and directly to industry. Many
-        of the young people we work with go on to pursue creative careers. Our
-        work allows young people to safely explore these options with the
-        support of SYFF.
-      </p>
+        <p>
+          All of our work in schools and during outreach projects allows this
+          interaction. For young people who are interested in taking this
+          further, we can offer pathways to further learning and directly to
+          industry. Many of the young people we work with go on to pursue
+          creative careers. Our work allows young people to safely explore these
+          options with the support of SYFF.
+        </p>
 
-      <p>
-        We are proud to be supported by The Sean Connery Foundation. The Sean
-        Connery Foundation grant increases operational capacity, allowing SYFF
-        to expand screen education efforts in three areas of focus: film
-        education in schools, film outreach projects that reach students in need
-        and the execution of their annual youth film festival.
-      </p>
-    </hgroup>
+        <p>
+          We are proud to be supported by The Sean Connery Foundation. The Sean
+          Connery Foundation grant increases operational capacity, allowing SYFF
+          to expand screen education efforts in three areas of focus: film
+          education in schools, film outreach projects that reach students in
+          need and the execution of their annual youth film festival.
+        </p>
+      </hgroup>
 
-    <section class="container">
-      <blockquote class="blockquote">
-        “My dad’s career in the film industry happened by accident and changed
-        the trajectory of his life. Discovering the crafts and trades of
-        filmmaking, beyond acting and directing, should not be reserved only for
-        the rich, well-connected or lucky ones. And, making and discerning
-        screen-based storytelling is nothing short of a vital 21st-century
-        skill. It builds creativity, agency and voice, project management skills
-        and empathy, to name just a few. Supporting SYFF, and screen education
-        more generally, as a focus of our foundation is an exciting and natural
-        expression of my father’s legacy that we hope will help to prepare the
-        young Scottish people for the future that lies ahead,”
-        <span>SYFF Patron Jason Connery</span>
-      </blockquote>
-    </section>
-
-    <section class="container">
-      <h2>
-        We are a film charity - so why just read about us when you can watch a
-        film?
-      </h2>
-
-      <div class="grid">
-        <VideoEmbed videoId="787998256" />
-
-        <VideoEmbed videoId="787999434" />
-      </div>
-    </section>
-
-    <section class="container">
-      <h2>What Do We Do?</h2>
-      <div class="grid">
-        <div>
-          <img
-            src="https://placehold.co/600x400"
-            width="600"
-            height="400"
-            alt="placholder"
-          />
-          <h3>Festival</h3>
+      <figure class="container quote">
+        <blockquote>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-            luctus posuere eros sed semper. Nulla nec dolor in elit tincidunt
-            pellentesque quis id massa. Praesent tincidunt dapibus elementum.
+            “My dad&rsquo;s career in the film industry happened by accident and
+            changed the trajectory of his life. Discovering the crafts and
+            trades of filmmaking, beyond acting and directing, should not be
+            reserved only for the rich, well-connected or lucky ones. And,
+            making and discerning screen-based storytelling is nothing short of
+            a vital 21st-century skill. It builds creativity, agency and voice,
+            project management skills and empathy, to name just a few.
+            Supporting SYFF, and screen education more generally, as a focus of
+            our foundation is an exciting and natural expression of my
+            father&rsquo;s legacy that we hope will help to prepare the young
+            Scottish people for the future that lies ahead,”
           </p>
-          <a href="/festival/" class="btn">Learn More</a>
-        </div>
-        <div>
-          <img
-            src="https://placehold.co/600x400"
-            width="600"
-            height="400"
-            alt="placholder"
-          />
-          <h3>Outreach</h3>
-          <p>
-            Nulla euismod molestie elit a porta. In hac habitasse platea
-            dictumst. Class aptent taciti sociosqu ad litora torquent per
-            conubia nostra, per inceptos himenaeos.
-          </p>
-          <a href="/outreach/" class="btn">Learn More</a>
-        </div>
-        <div>
-          <img
-            src="https://placehold.co/600x400"
-            width="600"
-            height="400"
-            alt="placholder"
-          />
-          <h3>Education</h3>
-          <p>
-            Aliquam fermentum faucibus arcu, et ornare nisi. Phasellus nec
-            egestas velit. Mauris fringilla nulla ipsum, et pellentesque sem
-            cursus quis. Ad litora torquent per conubia nostra.
-          </p>
-          <a href="/education/" class="btn">Learn More</a>
-        </div>
-      </div>
-    </section>
+        </blockquote>
+        <figcaption>&ndash; SYFF Patron Jason Connery</figcaption>
+      </figure>
 
-    <section
-      class="container"
-      style="background-color: var(--color-grey); --container-padding: 3rem;"
-    >
-      <div class="stats">
-        <div>
-          <h2>Impact</h2>
-          <p>
-            Vestibulum ultricies metus ut ligula vestibulum, a dictum nisl
-            elementum. Donec sed mauris in nisi efficitur placerat a ac massa.
-            Fusce consectetur justo fermentum mauris mattis aliquam non vel
-            odio. Mauris ultricies erat ut arcu ornare, ac efficitur urna
-            maximus. Pellentesque in nibh id neque dictum tincidunt.
-          </p>
-        </div>
-        <div>
-          <img src={piechart} />
-        </div>
-      </div>
-    </section>
+      <section class="container">
+        <h2>
+          We are a film charity - so why just read about us when you can watch a
+          film?
+        </h2>
 
-    <section class="container">
-      <h2 class="text-center">Testimonials</h2>
-      <div class="grid testimonials">
-        <div>
-          <img
-            src="https://placehold.co/400x400"
-            width="400"
-            height="400"
-            alt="placholder"
-          />
-          <h3>Elsa Giles</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-            luctus posuere eros sed semper. Nulla nec dolor in elit tincidunt
-            pellentesque quis id massa. Praesent tincidunt dapibus elementum.
-          </p>
+        <div class="grid">
+          <VideoEmbed videoId="787998256" />
+
+          <VideoEmbed videoId="787999434" />
         </div>
-        <div>
-          <img
-            src="https://placehold.co/400x400"
-            width="400"
-            height="400"
-            alt="placholder"
-          />
-          <h3>Yasmin Downs</h3>
-          <p>
-            Nulla euismod molestie elit a porta. In hac habitasse platea
-            dictumst. Class aptent taciti sociosqu ad litora torquent per
-            conubia nostra, per inceptos himenaeos.
-          </p>
+      </section>
+
+      <section
+        class="container"
+        style="background-color: var(--color-light-grey);"
+      >
+        <h2>What Do We Do?</h2>
+        <div class="grid links">
+          <div>
+            <img src="../img/festival-thumb.jpg" alt="Film festival winners" />
+            <h3>Festival</h3>
+            <p>
+              Since 2015, we have held an event to celebrate the creativity of
+              young Scottish filmmakers. Featuring screenings, workshops, talks
+              and panels, this is where anyone can come along and find out about
+              the world of film.
+            </p>
+            <a href="/festival/" class="btn">Learn More</a>
+          </div>
+
+          <div>
+            <img
+              src="../img/outreach-thumb.jpg"
+              alt="Outreach project at Armadale Academy"
+            />
+            <h3>Outreach</h3>
+            <p>
+              Throughout the year, we work with youth groups and produce short
+              films. Projects target young people who would have difficulty
+              accessing film and the film making process.
+            </p>
+            <a href="/outreach/" class="btn">Learn More</a>
+          </div>
+
+          <div>
+            <img
+              src="../img/education-thumb.jpg"
+              alt="Into Film, The Bridge, Dumfries"
+            />
+            <h3>Education</h3>
+            <p>
+              Working in schools, we teach pupils and teachers how to analyse
+              films and how to produce their own work using the tools that they
+              have in the classroom.
+            </p>
+            <a href="/education/" class="btn">Learn More</a>
+          </div>
         </div>
-        <div>
-          <img
-            src="https://placehold.co/400x400"
-            width="400"
-            height="400"
-            alt="placholder"
-          />
-          <h3>Isaac Harrison</h3>
-          <p>
-            Aliquam fermentum faucibus arcu, et ornare nisi. Phasellus nec
-            egestas velit. Mauris fringilla nulla ipsum, et pellentesque sem
-            cursus quis.
-          </p>
+      </section>
+
+      <section class="container">
+        <div class="stats">
+          <div>
+            <h2>Impact</h2>
+            <p>
+              Vestibulum ultricies metus ut ligula vestibulum, a dictum nisl
+              elementum. Donec sed mauris in nisi efficitur placerat a ac massa.
+              Fusce consectetur justo fermentum mauris mattis aliquam non vel
+              odio. Mauris ultricies erat ut arcu ornare, ac efficitur urna
+              maximus. Pellentesque in nibh id neque dictum tincidunt.
+            </p>
+          </div>
+          <div>
+            <img src={piechart} />
+          </div>
         </div>
-        <div>
-          <img
-            src="https://placehold.co/400x400"
-            width="400"
-            height="400"
-            alt="placholder"
-          />
-          <h3>Tim Roth</h3>
-          <p>
-            Aliquam fermentum faucibus arcu, et ornare nisi. Phasellus nec
-            egestas velit. Mauris fringilla nulla ipsum, et pellentesque sem
-            cursus quis.
-          </p>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <Footer />
   </body>
