@@ -14,7 +14,7 @@ import Font from "../components/Font.astro";
 
     <Font />
 
-    <title>Staff</title>
+    <title>Our Staff</title>
     <meta
       name="description"
       content="The Scottish Youth Film Foundation is a charity that aims to improve the life outcomes of young people in Scotland through film. We do this through our annual festival, through film education in schools, and through Outreach film projects that target young people who would not normally have an opportunity to make a film."
@@ -29,10 +29,10 @@ import Font from "../components/Font.astro";
     <meta property="og:image:alt" content="Scottish Youth Film Foundation" />
     <meta property="og:locale" content="en_GB" />
     <meta property="og:site_name" content="Scottish Youth Film Foundation" />
-    <meta property="og:title" content="Staff" />
+    <meta property="og:title" content="Our Staff" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://syff.scot/staff" />
-    <link rel="canonical" href="https://syff.scot/staff" />
+    <meta property="og:url" content="https://syff.scot/our-staff" />
+    <link rel="canonical" href="https://syff.scot/our-staff" />
 
     <link rel="icon" type="image/svg+xml" href={favicon} />
     <meta name="generator" content={Astro.generator} />
@@ -41,14 +41,17 @@ import Font from "../components/Font.astro";
     <Navigation />
 
     <main id="content">
-      <section class="container">
-        <h1>Staff</h1>
+      <hgroup class="container intro">
+        <h1 class="headline">Our Staff</h1>
+        <p class="lede">Some intro blurb</p>
+      </hgroup>
 
-        <div class="staff">
-          <div>
+      <section class="container">
+        <div class="patron">
+          <div class="patron-pic">
             <img src="../img/dave.jpg" alt="David Barras" />
           </div>
-          <div>
+          <div class="patron-text">
             <h2>David Barras</h2>
             <h3>Co-Founder/Executive Director</h3>
             <p>
@@ -64,11 +67,11 @@ import Font from "../components/Font.astro";
           </div>
         </div>
 
-        <div class="staff">
-          <div>
+        <div class="patron">
+          <div class="patron-pic">
             <img src="../img/scott.jpg" alt="Scott Mackay" />
           </div>
-          <div>
+          <div class="patron-text">
             <h2>Scott Mackay</h2>
             <h3>Co-Founder/Executive Director</h3>
             <p>
@@ -86,11 +89,11 @@ import Font from "../components/Font.astro";
           </div>
         </div>
 
-        <div class="staff">
-          <div>
+        <div class="patron">
+          <div class="patron-pic">
             <img src="../img/heather.jpg" alt="Heather Bowery" />
           </div>
-          <div>
+          <div class="patron-text">
             <h2>Heather Bowery</h2>
             <h3>General Manager</h3>
             <p>

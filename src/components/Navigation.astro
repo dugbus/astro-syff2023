@@ -3,7 +3,7 @@ import logo from "../img/syff-logo.svg";
 import sprites from "../img/syff-sprites.svg";
 ---
 
-<nav>
+<nav role="navigation" aria-label="main navigation">
   <a href="/"
     ><img
       src={logo}
@@ -12,14 +12,14 @@ import sprites from "../img/syff-sprites.svg";
       alt="Scottish Youth Film Foundation"
     /></a
   >
-  <ul>
+  <ul class="navigation-list">
     <li>
       <a href="/">Home</a>
     </li>
     <li>
       <a href="/news/">News</a>
     </li>
-    <li class="dropdown">
+    <li class="has-dropdown">
       <a href="javascript:;"
         >Who We Are <svg class="icon">
           <use xlink:href={`${sprites}#down-arrow`}></use>
@@ -33,17 +33,17 @@ import sprites from "../img/syff-sprites.svg";
           <a href="/story/">Story of SYFF</a>
         </li>
         <li>
-          <a href="/staff/">Staff</a>
+          <a href="/our-staff/">Our Staff</a>
         </li>
         <li>
-          <a href="/board/">Board</a>
+          <a href="/our-board/">Our Board</a>
         </li>
         <li>
-          <a href="/patrons/">Patrons</a>
+          <a href="/our-patrons/">Our Patrons</a>
         </li>
       </ul>
     </li>
-    <li class="dropdown">
+    <li class="has-dropdown">
       <a href="javascript:;"
         >What We Do <svg class="icon">
           <use xlink:href={`${sprites}#down-arrow`}></use>
@@ -68,6 +68,14 @@ import sprites from "../img/syff-sprites.svg";
       <a href="/contact/">Contact</a>
     </li>
   </ul>
+  <div class="hamburger">
+    <a href="javascript:;">
+      <svg class="icon">
+        <use xlink:href={`${sprites}#hamburger`}></use>
+      </svg>
+      MENU
+    </a>
+  </div>
 </nav>
 
 <style>
@@ -85,6 +93,7 @@ import sprites from "../img/syff-sprites.svg";
     box-shadow: 0 0 1rem rgba(0 0 0 / 30%);
     position: relative;
     z-index: 10;
+    border-top: 3px solid var(--color-primary);
   }
 
   nav img {
@@ -92,11 +101,28 @@ import sprites from "../img/syff-sprites.svg";
     max-width: 10rem;
   }
 
-  nav ul {
+  nav > ul {
+    background-color: var(--color-charcoal);
+    bottom: 0;
+    box-sizing: border-box;
+    color: white;
+    right: 0;
+    padding: 0 2rem 2rem;
+    position: fixed;
+    top: 0;
+    transform: translate(100%);
+    transition: transform var(--transition-time);
+    width: 50%;
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  nav > ul.is-open {
+    transform: translate(0);
   }
 
   nav li {
@@ -105,8 +131,9 @@ import sprites from "../img/syff-sprites.svg";
     position: relative;
   }
 
-  nav li a {
-    color: var(--color-ink);
+  nav li a,
+  .hamburger a {
+    color: var(--color-white);
     display: block;
     padding: 2.25rem 1.25rem;
     text-decoration: none;
@@ -115,28 +142,10 @@ import sprites from "../img/syff-sprites.svg";
     font-family: "Poppins", sans-serif;
     font-size: 0.875rem;
     position: relative;
-    transition: color var(--transition-time) ease,
-      background-color var(--transition-time) ease;
     background-color: transparent;
     white-space: nowrap;
     position: relative;
     z-index: 1;
-  }
-
-  nav li::after {
-    content: "";
-    background: var(--color-grey);
-    display: block;
-    position: absolute;
-    width: 1px;
-    height: 2rem;
-    right: 0;
-    top: 1.75rem;
-    z-index: 0;
-  }
-
-  nav li:last-of-type::after {
-    background: transparent;
   }
 
   nav li a:focus-within,
@@ -151,38 +160,90 @@ import sprites from "../img/syff-sprites.svg";
     background: transparent;
   }
 
-  .dropdown {
+  nav ul ul li a:focus-within,
+  nav ul ul li a:hover {
+    color: var(--color-white);
+    background-color: var(--color-teal);
+    outline: 0;
+  }
+
+  .hamburger a {
+    color: var(--color-ink);
+  }
+
+  .hamburger svg {
+    width: 2.5rem;
+    height: 2.25rem;
+    vertical-align: middle;
+    top: -1px;
+    position: relative;
+    color: var(--color-ink);
+  }
+
+  .has-dropdown {
     position: relative;
   }
 
-  .dropdown svg {
+  .has-dropdown svg {
     height: 0.61255rem;
     width: 0.75rem;
     margin-left: 0.25rem;
   }
 
-  .dropdown ul {
+  .has-dropdown ul {
     position: absolute;
     display: none;
     box-shadow: 0 0 1rem rgba(0 0 0 / 30%);
     padding: 0;
   }
 
-  .dropdown li {
+  .has-dropdown li {
     background: var(--color-white);
   }
 
-  .dropdown li::after {
+  .has-dropdown li::after {
     background: transparent;
   }
 
-  .dropdown li a {
+  .has-dropdown li a {
     padding: 1.25rem 1.25rem;
   }
 
-  .dropdown:focus-within ul,
-  .dropdown ul:focus-within {
+  .has-dropdown:focus ul,
+  .has-dropdown:focus-within ul,
+  .has-dropdown ul:focus,
+  .has-dropdown ul:focus-within {
     display: block;
+  }
+
+  @media screen and (min-width: 1200px) {
+    .hamburger {
+      display: none;
+    }
+    nav > ul {
+      background-color: transparent;
+      flex-direction: row;
+      transform: none;
+      position: static;
+      width: auto;
+    }
+    nav li::after {
+      content: "";
+      background: var(--color-grey);
+      display: block;
+      position: absolute;
+      width: 1px;
+      height: 2rem;
+      right: 0;
+      top: 1.75rem;
+      z-index: 0;
+    }
+    nav li:last-of-type::after {
+      background: transparent;
+    }
+    nav li a {
+      color: var(--color-ink);
+    }
   }
 </style>
 
@@ -198,4 +259,10 @@ import sprites from "../img/syff-sprites.svg";
       }
     });
   }
+
+  const navToggle = document.querySelector(".hamburger");
+  const navList = document.querySelector(".navigation-list");
+  navToggle.addEventListener("click", () => {
+    navList.classList.toggle("is-open");
+  });
 </script>
