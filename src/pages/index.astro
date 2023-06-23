@@ -36,10 +36,6 @@ import VimeoEmbed from "../components/VimeoEmbed.astro";
 
     <link rel="icon" type="image/svg+xml" href={favicon} />
     <meta name="generator" content={Astro.generator} />
-
-    <!-- <script
-      src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"
-    ></script> -->
   </head>
   <body id="top">
     <Navigation />
@@ -132,7 +128,11 @@ import VimeoEmbed from "../components/VimeoEmbed.astro";
         <h2>What Do We Do?</h2>
         <div class="grid links">
           <div>
-            <img src="/img/festival-thumb.jpg" alt="Film festival winners" />
+            <img
+              class="shadow"
+              src="/img/festival-thumb.jpg"
+              alt="Film festival winners"
+            />
             <h3>Festival</h3>
             <p>
               Since 2015, we have held an event to celebrate the creativity of
@@ -145,6 +145,7 @@ import VimeoEmbed from "../components/VimeoEmbed.astro";
 
           <div>
             <img
+              class="shadow"
               src="/img/outreach-thumb.jpg"
               alt="Outreach project at Armadale Academy"
             />
@@ -159,6 +160,7 @@ import VimeoEmbed from "../components/VimeoEmbed.astro";
 
           <div>
             <img
+              class="shadow"
               src="/img/education-thumb.jpg"
               alt="Into Film, The Bridge, Dumfries"
             />

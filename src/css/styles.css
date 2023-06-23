@@ -19,7 +19,6 @@
   --color-lime: #99CC33;
   --color-white: #fff;
   --color-dark-blue: #092e48;
-  --color-dark-blue: #1d2952;
   --color-primary: #8a2be2;
   --color-primary-dark: #7324bd;
   --color-charcoal: #1d1d2c;
@@ -107,6 +106,15 @@ img {
   margin: 0;
 }
 
+.shadow {
+  box-shadow:
+    0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075),
+    0 16px 16px hsl(0deg 0% 0% / 0.075);
+}
+
 .hero {
   --container-padding: 0;
 }
@@ -136,7 +144,6 @@ img {
 .quote {
   background: var(--color-teal);
   --container-width: var(--width-m);
-  --container-padding: 6rem;
 }
 
 .quote blockquote {
@@ -245,6 +252,8 @@ img {
 .stats {
   font-size: 1.25rem;
   text-align: center;
+  font-weight: 600;
+
 }
 
 .stats span {
@@ -257,7 +266,12 @@ img {
   display: grid;
   place-items: center;
   margin: 0 auto 1rem;
-  ;
+  box-shadow:
+    0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075);
+  font-weight: 600;
 }
 
 .testimonials {
@@ -303,7 +317,7 @@ img {
 }
 
 .patron-pic {
-  margin: 0 auto;
+  text-align: right;
 }
 
 .patron-pic img {
@@ -319,7 +333,10 @@ img {
   }
 }
 
+.scf {
+  text-align: center;
+}
+
 .scf img {
   max-width: 20rem;
-  margin: 0 auto;
 }
