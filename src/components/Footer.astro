@@ -1,45 +1,50 @@
 ---
-import favicon from "../img/syff-favicon.svg";
 import sprites from "../img/syff-sprites.svg";
 ---
 
 <footer class="container">
-  <div class="social">
-    <a
-      href="https://www.instagram.com/scottishyouthfilmfoundation/?hl=en"
-      target="_blank"
-      ><svg class="icon">
-        <use xlink:href={`${sprites}#instagram`}></use>
-      </svg></a
-    >
-    <a href="https://twitter.com/thisissyff?lang=en" target="_blank"
-      ><svg class="icon">
-        <use xlink:href={`${sprites}#twitter`}></use>
-      </svg></a
-    >
-    <a
-      href="https://www.facebook.com/scottishyouthfilmfoundation/"
-      target="_blank"
-      ><svg class="icon">
-        <use xlink:href={`${sprites}#facebook`}></use>
-      </svg></a
-    >
+  <div class="wrapper">
+    <div class="social">
+      <a
+        href="https://www.instagram.com/scottishyouthfilmfoundation/?hl=en"
+        target="_blank"
+        ><svg class="icon">
+          <use xlink:href={`${sprites}#instagram`}></use>
+        </svg></a
+      >
+      <a href="https://twitter.com/thisissyff?lang=en" target="_blank"
+        ><svg class="icon">
+          <use xlink:href={`${sprites}#twitter`}></use>
+        </svg></a
+      >
+      <a
+        href="https://www.facebook.com/scottishyouthfilmfoundation/"
+        target="_blank"
+        ><svg class="icon">
+          <use xlink:href={`${sprites}#facebook`}></use>
+        </svg></a
+      >
+    </div>
+
+    <div class="oscr">
+      <img src="/img/small-green.png" alt="OSCR Scottish Charity Regulator" />
+    </div>
+
+    <div class="logo">
+      <a href="#top" title="back to top">
+        <img
+          src="/img/syff-favicon.svg"
+          width="64"
+          height="64"
+          alt="Scottish Youth Film Foundation"
+        />
+      </a>
+    </div>
   </div>
 
   <div class="copyright">
     Copyright © <span id="copyright-year">2000</span> Scottish Youth Film Foundation.
     All rights reserved.
-  </div>
-
-  <div>
-    <a href="#top" title="back to top">
-      <img
-        src={favicon}
-        width="64"
-        height="64"
-        alt="Scottish Youth Film Foundation"
-      />
-    </a>
   </div>
 </footer>
 
@@ -52,14 +57,32 @@ import sprites from "../img/syff-sprites.svg";
     font-weight: 500;
     position: sticky;
     top: 100%;
+  }
+
+  .wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  .copyright {
+  .wrapper > div {
     flex: 1;
+  }
+
+  .copyright {
     text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    border-top: 1px solid rgba(255 255 255 / 20%);
+  }
+
+  .oscr {
+    max-width: 8rem;
+  }
+
+  .logo {
+    text-align: right;
   }
 
   a {

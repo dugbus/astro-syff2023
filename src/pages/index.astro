@@ -1,12 +1,10 @@
 ---
 import "../css/styles.css";
 import favicon from "../img/syff-favicon.svg";
-import sharing from "../img/syff-social-share.png";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import Font from "../components/Font.astro";
-import VideoEmbed from "../components/VideoEmbed.astro";
-import piechart from "../img/pie-chart.png";
+import VimeoEmbed from "../components/VimeoEmbed.astro";
 ---
 
 <html lang="en-GB">
@@ -25,7 +23,7 @@ import piechart from "../img/pie-chart.png";
       property="og:description"
       content="The Scottish Youth Film Foundation is a charity that aims to improve the life outcomes of young people in Scotland through film. We do this through our annual festival, through film education in schools, and through Outreach film projects that target young people who would not normally have an opportunity to make a film."
     />
-    <meta property="og:image" content={sharing} />
+    <meta property="og:image" content="/img/syff-social-share.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Scottish Youth Film Foundation" />
@@ -39,9 +37,9 @@ import piechart from "../img/pie-chart.png";
     <link rel="icon" type="image/svg+xml" href={favicon} />
     <meta name="generator" content={Astro.generator} />
 
-    <script
+    <!-- <script
       src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"
-    ></script>
+    ></script> -->
   </head>
   <body id="top">
     <Navigation />
@@ -57,7 +55,7 @@ import piechart from "../img/pie-chart.png";
     </header>
 
     <main id="content">
-      <hgroup class="container intro">
+      <hgroup class="container">
         <h1 class="headline">
           Improving the life outcomes of young Scots through film
         </h1>
@@ -87,6 +85,12 @@ import piechart from "../img/pie-chart.png";
           education in schools, film outreach projects that reach students in
           need and the execution of their annual youth film festival.
         </p>
+        <div class="scf">
+          <img
+            src="/img/scf-logo.png"
+            alt="Outreach project at Armadale Academy"
+          />
+        </div>
       </hgroup>
 
       <figure class="container quote">
@@ -115,9 +119,9 @@ import piechart from "../img/pie-chart.png";
         </h2>
 
         <div class="grid">
-          <VideoEmbed videoId="833346056" />
+          <VimeoEmbed videoId="833346056" />
 
-          <VideoEmbed videoId="833347550" />
+          <VimeoEmbed videoId="833347550" />
         </div>
       </section>
 
@@ -128,7 +132,7 @@ import piechart from "../img/pie-chart.png";
         <h2>What Do We Do?</h2>
         <div class="grid links">
           <div>
-            <img src="../img/festival-thumb.jpg" alt="Film festival winners" />
+            <img src="/img/festival-thumb.jpg" alt="Film festival winners" />
             <h3>Festival</h3>
             <p>
               Since 2015, we have held an event to celebrate the creativity of
@@ -141,7 +145,7 @@ import piechart from "../img/pie-chart.png";
 
           <div>
             <img
-              src="../img/outreach-thumb.jpg"
+              src="/img/outreach-thumb.jpg"
               alt="Outreach project at Armadale Academy"
             />
             <h3>Outreach</h3>
@@ -155,7 +159,7 @@ import piechart from "../img/pie-chart.png";
 
           <div>
             <img
-              src="../img/education-thumb.jpg"
+              src="/img/education-thumb.jpg"
               alt="Into Film, The Bridge, Dumfries"
             />
             <h3>Education</h3>
@@ -170,19 +174,26 @@ import piechart from "../img/pie-chart.png";
       </section>
 
       <section class="container">
-        <div class="stats">
+        <h2 class="text-center">Impact</h2>
+        <br />
+        <div class="grid stats">
           <div>
-            <h2>Impact</h2>
-            <p>
-              Vestibulum ultricies metus ut ligula vestibulum, a dictum nisl
-              elementum. Donec sed mauris in nisi efficitur placerat a ac massa.
-              Fusce consectetur justo fermentum mauris mattis aliquam non vel
-              odio. Mauris ultricies erat ut arcu ornare, ac efficitur urna
-              maximus. Pellentesque in nibh id neque dictum tincidunt.
-            </p>
+            <span>9</span> Festivals
           </div>
           <div>
-            <img src={piechart} />
+            <span>16</span> School interventions
+          </div>
+          <div>
+            <span>20+</span> Partner organisations
+          </div>
+          <div>
+            <span>25+</span> Outreach projects
+          </div>
+          <div>
+            <span>500+</span> Children worked with on Education and Outreach projects
+          </div>
+          <div>
+            <span>900+</span> Festival attendees (live and online)
           </div>
         </div>
       </section>

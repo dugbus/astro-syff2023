@@ -1,10 +1,11 @@
 ---
 import "../css/styles.css";
 import favicon from "../img/syff-favicon.svg";
-import sharing from "../img/syff-social-share.png";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import Font from "../components/Font.astro";
+import YouTubeEmbed from "../components/YouTubeEmbed.astro";
+import SwiperSlides from "../components/SwiperSlides.astro";
 ---
 
 <html lang="en-GB">
@@ -23,7 +24,7 @@ import Font from "../components/Font.astro";
       property="og:description"
       content="The Scottish Youth Film Foundation is a charity that aims to improve the life outcomes of young people in Scotland through film. We do this through our annual festival, through film education in schools, and through Outreach film projects that target young people who would not normally have an opportunity to make a film."
     />
-    <meta property="og:image" content={sharing} />
+    <meta property="og:image" content="/img/syff-social-share.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Scottish Youth Film Foundation" />
@@ -42,9 +43,9 @@ import Font from "../components/Font.astro";
 
     <main id="content">
       <section class="container">
-        <h1>Festival</h1>
+        <h1 class="headline">Festival</h1>
 
-        <p>
+        <p class="lede">
           Our annual festival is a celebration of the creativity of
           Scotland&rsquo;s young filmmakers. Each year, we screen the best films
           shortlisted from work submitted from across the country and give out
@@ -67,41 +68,79 @@ import Font from "../components/Font.astro";
 
         <p>
           If you would like to submit a film, you have to be 19 or under,
-          resident in Scotland and your film must be 7 minutes or under. Please
-          follow this link - Film Freeway Link
+          resident in Scotland and your film must be 7 minutes or under.
+        </p>
+
+        <br />
+
+        <p class="text-center">
+          <a
+            href="https://filmfreeway.com/festivals/6286?utm_campaign=Scottish+Youth+Film+Festival&utm_medium=External&utm_source=Submission+Button"
+            target="_blank"
+            title="Click to submit on FilmFreeway"
+            ><img
+              src="https://public-assets.filmfreeway.com/submission_buttons/v2/med_submission_btn@2x-mint-gradient.png"
+              title="Click to submit on FilmFreeway"
+              width="263"
+              height="102"
+            /></a
+          >
         </p>
       </section>
 
+      <section class="container" style="--container-width: var(--width-m)">
+        <YouTubeEmbed videoId="2uNQKsIFyBI" />
+      </section>
+
       <section class="container">
-        <blockquote class="blockquote">
-          “Professional, heartwarming and planting seeds for the future in so
-          many ways.”
-          <span>Tim Flood, Filmmaker</span>
-        </blockquote>
+        <h2 class="text-center">Praise For The Festival</h2>
 
-        <blockquote class="blockquote">
-          “This is a great film festival for young people, it does not try to be
-          grand or exclusive. It encourages all the young people it can reach,
-          to take part and learn something or take something positive away.”
-          <span>Lee Vann Wakelin, Filmmaker</span>
-        </blockquote>
+        <SwiperSlides>
+          <div class="swiper-slide">
+            <blockquote class="small-quote">
+              <p>
+                “Professional, heartwarming and planting seeds for the future in
+                so many ways.”
+                <span>- Tim Flood, Filmmaker</span>
+              </p>
+            </blockquote>
+          </div>
 
-        <blockquote class="blockquote">
-          “All the young people I've worked with, whose films have featured in
-          the festival, really get a lot out of taking part. Well done to
-          everyone involved in making this a highlight of the year in film
-          education in Scotland.”
-          <span>Kevin Cameron, Filmmaker</span>
-        </blockquote>
+          <div class="swiper-slide">
+            <blockquote class="small-quote">
+              <p>
+                “This is a great film festival for young people, it does not try
+                to be grand or exclusive. It encourages all the young people it
+                can reach, to take part and learn something or take something
+                positive away.”
+                <span>- Lee Vann Wakelin, Filmmaker</span>
+              </p>
+            </blockquote>
+          </div>
 
-        <blockquote class="blockquote">
-          First class. Not just a film festival. Two days crammed full of lots
-          of young film students taking advantage of high quality workshops
-          prior to the awards. Brilliant idea.”
-          <span>Graham Kitchener, Filmmaker</span>
-        </blockquote>
+          <div class="swiper-slide">
+            <blockquote class="small-quote">
+              <p>
+                “All the young people I've worked with, whose films have
+                featured in the festival, really get a lot out of taking part.
+                Well done to everyone involved in making this a highlight of the
+                year in film education in Scotland.”
+                <span>- Kevin Cameron, Filmmaker</span>
+              </p>
+            </blockquote>
+          </div>
 
-        <p>Link - Festival film</p>
+          <div class="swiper-slide">
+            <blockquote class="small-quote">
+              <p>
+                First class. Not just a film festival. Two days crammed full of
+                lots of young film students taking advantage of high quality
+                workshops prior to the awards. Brilliant idea.”
+                <span>- Graham Kitchener, Filmmaker</span>
+              </p>
+            </blockquote>
+          </div>
+        </SwiperSlides>
       </section>
     </main>
 

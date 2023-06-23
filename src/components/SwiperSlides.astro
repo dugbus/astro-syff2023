@@ -1,0 +1,27 @@
+---
+---
+
+<section class="swiper">
+  <div class="swiper-wrapper">
+    <slot />
+  </div>
+</section>
+
+<style>
+  .swiper {
+    --container-margin: 0;
+  }
+</style>
+
+<script>
+  import Swiper, { Autoplay } from "swiper";
+  Swiper.use([Autoplay]);
+  import "swiper/css";
+
+  const swiper = new Swiper(".swiper", {
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: true,
+    },
+  });
+</script>
