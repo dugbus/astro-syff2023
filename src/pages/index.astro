@@ -1,6 +1,5 @@
 ---
 import "../css/styles.css";
-import favicon from "../img/syff-favicon.svg";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import Font from "../components/Font.astro";
@@ -34,7 +33,7 @@ import VimeoEmbed from "../components/VimeoEmbed.astro";
     <meta property="og:url" content="https://syff.scot" />
     <link rel="canonical" href="https://syff.scot/" />
 
-    <link rel="icon" type="image/svg+xml" href={favicon} />
+    <link rel="icon" type="image/svg+xml" href="/img/syff-favicon.svg" />
     <meta name="generator" content={Astro.generator} />
   </head>
   <body id="top">
@@ -45,7 +44,7 @@ import VimeoEmbed from "../components/VimeoEmbed.astro";
         srcset="/img/header-home-mobile.jpg 828w, /img/header-home-desktop.jpg 2048w"
         sizes="(max-width: 828px) 828px,
         2048px"
-        src="../img/header-home-desktop.jpg"
+        src="/img/header-home-desktop.jpg"
         alt="Young people on our COP TV project"
       />
     </header>
@@ -177,6 +176,7 @@ import VimeoEmbed from "../components/VimeoEmbed.astro";
 
       <section class="container">
         <h2 class="text-center">Impact</h2>
+        <p class="text-center">How great are we...</p>
         <br />
         <div class="grid stats">
           <div>
