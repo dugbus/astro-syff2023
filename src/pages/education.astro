@@ -3,6 +3,8 @@ import "../css/styles.css";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import Font from "../components/Font.astro";
+import VimeoEmbed from "../components/VimeoEmbed.astro";
+import SwiperSlides from "../components/SwiperSlides.astro";
 ---
 
 <html lang="en-GB">
@@ -39,10 +41,10 @@ import Font from "../components/Font.astro";
     <Navigation />
 
     <main id="content">
-      <section class="container">
-        <h1>Education</h1>
+      <section class="container intro">
+        <h1 class="headline">Education</h1>
 
-        <p>
+        <p class="lede">
           We have a long track record of working in schools and in 2019, SYFF
           ran a pilot project in Clackmannanshire to showcase how film in the
           classroom can improve literacy and several other markers in education.
@@ -58,49 +60,82 @@ import Font from "../components/Font.astro";
         </p>
       </section>
 
-      <section class="container">
-        <blockquote class="blockquote">
-          “The whole experience has been fantastic &ndash; not only for the
-          children But for my own development. I&rsquo;ve always used media and
-          technology In the classroom but never as effectively as I will in the
-          future.”
-          <span>Beverley Donald, P7 teacher, Clackmannan Primary School</span>
-        </blockquote>
+      <section class="container intro bg-light-grey">
+        <VimeoEmbed videoId="508041111" />
+      </section>
 
-        <blockquote class="blockquote">
-          “ This project broke down barriers to literacy for all our learners
-          regardless of their abilities. They enjoyed storytelling and film
-          making and were amazed by what they achieved.”
-          <span
-            >Jill Henderson, Teacher Special Educational Needs, Lochies School
-          </span>
-        </blockquote>
+      <section class="container intro">
+        <h2 class="text-center">Praise For Our Education</h2>
+        <SwiperSlides>
+          <div class="swiper-slide">
+            <blockquote class="small-quote">
+              <p>
+                “The whole experience has been fantastic &ndash; not only for
+                the children But for my own development. I&rsquo;ve always used
+                media and technology In the classroom but never as effectively
+                as I will in the future.”
+                <span
+                  >- Beverley Donald, P7 teacher, Clackmannan Primary School</span
+                >
+              </p>
+            </blockquote>
+          </div>
 
-        <blockquote class="blockquote">
-          “I have never seen my class so engaged in a project. It was also
-          training for me and gave me tools to use in the classroom. I have
-          planned my reading project in a completely different way.”
-          <span>Claire Hume, P6 Teacher, Banchory Primary School</span>
-        </blockquote>
+          <div class="swiper-slide">
+            <blockquote class="small-quote">
+              <p>
+                “ This project broke down barriers to literacy for all our
+                learners regardless of their abilities. They enjoyed
+                storytelling and film making and were amazed by what they
+                achieved.”
+                <span
+                  >- Jill Henderson, Teacher Special Educational Needs, Lochies
+                  School
+                </span>
+              </p>
+            </blockquote>
+          </div>
 
-        <blockquote class="blockquote">
-          “The whole thing was fun, the whole experience.”
-          <span>Young person, Kirkpatrick Fleming</span>
-        </blockquote>
+          <div class="swiper-slide">
+            <blockquote class="small-quote">
+              <p>
+                “I have never seen my class so engaged in a project. It was also
+                training for me and gave me tools to use in the classroom. I
+                have planned my reading project in a completely different way.”
+                <span>- Claire Hume, P6 Teacher, Banchory Primary School</span>
+              </p>
+            </blockquote>
+          </div>
 
-        <blockquote class="blockquote">
-          “We watch movies entirely differently now.”
-          <span>Young person, Banchory</span>
-        </blockquote>
+          <div class="swiper-slide">
+            <blockquote class="small-quote">
+              <p>
+                “The whole thing was fun, the whole experience.”
+                <span>- Young person, Kirkpatrick Fleming</span>
+              </p>
+            </blockquote>
+          </div>
 
-        <blockquote class="blockquote">
-          “I&rsquo;m probably engaging more with it because I actually know how
-          to describe it and to understand it more than I did before we started
-          this project.
-          <span>Young person, Alva</span>
-        </blockquote>
+          <div class="swiper-slide">
+            <blockquote class="small-quote">
+              <p>
+                “We watch movies entirely differently now.”
+                <span>- Young person, Banchory</span>
+              </p>
+            </blockquote>
+          </div>
 
-        <p>Education Film</p>
+          <div class="swiper-slide">
+            <blockquote class="small-quote">
+              <p>
+                “I&rsquo;m probably engaging more with it because I actually
+                know how to describe it and to understand it more than I did
+                before we started this project.
+                <span>- Young person, Alva</span>
+              </p>
+            </blockquote>
+          </div>
+        </SwiperSlides>
       </section>
     </main>
 

@@ -3,6 +3,8 @@ import "../css/styles.css";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import Font from "../components/Font.astro";
+import VimeoEmbed from "../components/VimeoEmbed.astro";
+import SwiperSlides from "../components/SwiperSlides.astro";
 ---
 
 <html lang="en-GB">
@@ -39,20 +41,24 @@ import Font from "../components/Font.astro";
     <Navigation />
 
     <main id="content">
-      <section class="container">
-        <h1>Outreach Projects</h1>
+      <section class="container intro">
+        <h1 class="headline">Outreach Projects</h1>
+
+        <p class="lede">
+          Outreach projects are where we work intensely with a group of young
+          people to produce a short film.
+        </p>
 
         <p>
-          Outreach projects are where we work intensely with a group of young
-          people to produce a short film. Each Outreach project is different but
-          in general we will visit the group to run an Input day, where we look
-          at films, analyse what makes them work and talk about story and
-          script. We&rsquo;ll then give some time for a script to be written and
-          come back to work with the group over the course of several days to
-          produce and shoot their film. All of the roles are taken by the young
-          people, with SYFF tutors on hand to guide the production. Once
-          complete we have a celebratory screening in the local community and
-          each outreach film will go on to be shown at our Festival.
+          Each Outreach project is different but in general we will visit the
+          group to run an Input day, where we look at films, analyse what makes
+          them work and talk about story and script. We&rsquo;ll then give some
+          time for a script to be written and come back to work with the group
+          over the course of several days to produce and shoot their film. All
+          of the roles are taken by the young people, with SYFF tutors on hand
+          to guide the production. Once complete we have a celebratory screening
+          in the local community and each outreach film will go on to be shown
+          at our Festival.
         </p>
 
         <p>
@@ -67,47 +73,77 @@ import Font from "../components/Font.astro";
         </p>
       </section>
 
-      <section class="container">
-        <blockquote class="blockquote">
-          “I loved the shooting days, because what we wrote became a reality.”
-          <span>Young person, Falkirk</span>
-        </blockquote>
+      <section class="container intro bg-light-grey">
+        <VimeoEmbed videoId="508044958" />
+      </section>
 
-        <blockquote class="blockquote">
-          “It just brought us all together. You kind of forget all the bad stuff
-          outside of this.”
-          <span>Young person, Inverclyde</span>
-        </blockquote>
+      <section class="container intro">
+        <h2 class="text-center">Praise For Our Projects</h2>
+        <SwiperSlides>
+          <div class="swiper-slide">
+            <blockquote class="small-quote">
+              <p>
+                “I loved the shooting days, because what we wrote became a
+                reality.”
+                <span>- Young person, Falkirk</span>
+              </p>
+            </blockquote>
+          </div>
 
-        <blockquote class="blockquote">
-          “It&rsquo;s been really inspiring. The ideas they have came up with
-          are fantastic. Way beyond what we would have expected. It blew our
-          socks off”
-          <span>Youth Worker, Inverclyde</span>
-        </blockquote>
+          <div class="swiper-slide">
+            <blockquote class="small-quote">
+              <p>
+                “It just brought us all together. You kind of forget all the bad
+                stuff outside of this.”
+                <span>- Young person, Inverclyde</span>
+              </p>
+            </blockquote>
+          </div>
 
-        <blockquote class="blockquote">
-          “There&rsquo;s been a really great balance of hard work and fun.
-          That&rsquo;s been managed fantastically.”
-          <span>Youth Worker, Inverclyde</span>
-        </blockquote>
+          <div class="swiper-slide">
+            <blockquote class="small-quote">
+              <p>
+                “It&rsquo;s been really inspiring. The ideas they have came up
+                with are fantastic. Way beyond what we would have expected. It
+                blew our socks off”
+                <span>- Youth Worker, Inverclyde</span>
+              </p>
+            </blockquote>
+          </div>
 
-        <blockquote class="blockquote">
-          “Making a film was a privilege, it&rsquo;s not something that happens
-          everyday. Some of us would never have gotten the opportunity to do
-          this and you&rsquo;ve gave us that chance”
-          <span>Young person, Livingston</span>
-        </blockquote>
+          <div class="swiper-slide">
+            <blockquote class="small-quote">
+              <p>
+                “There&rsquo;s been a really great balance of hard work and fun.
+                That&rsquo;s been managed fantastically.”
+                <span>- Youth Worker, Inverclyde</span>
+              </p>
+            </blockquote>
+          </div>
 
-        <blockquote class="blockquote">
-          “My favourite thing has been seeing the young people taking on
-          different parts in the film process, from acting, to doing sound, to
-          doing camera and seeing how they&rsquo;ve developed over the week of
-          the shoot.”
-          <span>Youth Support Worker, East Renfrewshire</span>
-        </blockquote>
+          <div class="swiper-slide">
+            <blockquote class="small-quote">
+              <p>
+                “Making a film was a privilege, it&rsquo;s not something that
+                happens everyday. Some of us would never have gotten the
+                opportunity to do this and you&rsquo;ve gave us that chance”
+                <span>- Young person, Livingston</span>
+              </p>
+            </blockquote>
+          </div>
 
-        <p>Links - Outreach films</p>
+          <div class="swiper-slide">
+            <blockquote class="small-quote">
+              <p>
+                “My favourite thing has been seeing the young people taking on
+                different parts in the film process, from acting, to doing
+                sound, to doing camera and seeing how they&rsquo;ve developed
+                over the week of the shoot.”
+                <span>- Youth Support Worker, East Renfrewshire</span>
+              </p>
+            </blockquote>
+          </div>
+        </SwiperSlides>
       </section>
     </main>
 
