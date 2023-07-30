@@ -84,7 +84,7 @@ h2,
 h3 {
   font-family: var(--font-headings);
   font-weight: 700;
-  margin: 1em 0;
+  margin: 0.75em 0;
   line-height: 1.25;
   text-wrap: balance;
   letter-spacing: -0.025em;
@@ -145,6 +145,16 @@ img {
     0 4px 4px hsl(0deg 0% 0% / 0.075),
     0 8px 8px hsl(0deg 0% 0% / 0.075),
     0 16px 16px hsl(0deg 0% 0% / 0.075);
+  margin-bottom: 1.5rem;
+}
+
+.figure {
+  margin: 1.5rem 0 1.25rem;
+}
+
+.figure figcaption {
+  font-size: 0.75rem;
+  text-align: right;
 }
 
 .hero {
@@ -154,7 +164,7 @@ img {
 .hero img {
   object-fit: cover;
   object-position: bottom;
-  max-height: 94vh;
+  aspect-ratio: 16 / 9;
   width: 100%;
 }
 
@@ -165,7 +175,7 @@ img {
   color: transparent;
 }
 
-.intro {
+.narrow {
   --container-width: var(--width-m);
 }
 

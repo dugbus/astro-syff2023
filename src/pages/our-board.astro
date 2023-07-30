@@ -3,6 +3,15 @@ import "../css/styles.css";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import Font from "../components/Font.astro";
+import Seo from "../components/Seo.astro";
+
+const title = "Our Board • Scottish Youth Film Foundation";
+const description =
+  "SYFF are fortunate to have a team of knowledgeable, engaged board members. Our Board helps steer our strategic direction and brings incredible experience across all sectors of education, business and the film industry. You can find out more about them here.";
+const permalink = "https://syff.scot/our-board";
+const image = "https://syff.scot/img/syff-social-share.png";
+const alt = "Scottish Youth Film Foundation";
+const type = "article";
 ---
 
 <html lang="en-GB">
@@ -12,28 +21,14 @@ import Font from "../components/Font.astro";
 
     <Font />
 
-    <title>Our Board</title>
-    <meta
-      name="description"
-      content="The Scottish Youth Film Foundation is a charity that aims to improve the life outcomes of young people in Scotland through film. We do this through our annual festival, through film education in schools, and through Outreach film projects that target young people who would not normally have an opportunity to make a film."
+    <Seo
+      title={title}
+      description={description}
+      permalink={permalink}
+      image={image}
+      alt={alt}
+      type={type}
     />
-    <meta
-      property="og:description"
-      content="The Scottish Youth Film Foundation is a charity that aims to improve the life outcomes of young people in Scotland through film. We do this through our annual festival, through film education in schools, and through Outreach film projects that target young people who would not normally have an opportunity to make a film."
-    />
-    <meta property="og:image" content="/img/syff-social-share.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Scottish Youth Film Foundation" />
-    <meta property="og:locale" content="en_GB" />
-    <meta property="og:site_name" content="Scottish Youth Film Foundation" />
-    <meta property="og:title" content="Our Board" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://syff.scot/our-board" />
-    <link rel="canonical" href="https://syff.scot/our-board" />
-
-    <link rel="icon" type="image/svg+xml" href="/img/syff-favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
   </head>
   <body id="top">
     <Navigation />

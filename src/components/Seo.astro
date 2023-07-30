@@ -1,0 +1,20 @@
+---
+const { title, description, permalink, image, alt, type } = Astro.props;
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={image} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={alt} />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:site_name" content="Scottish Youth Film Foundation" />
+<meta property="og:title" content={title} />
+<meta property="og:type" content={type} />
+<meta property="og:url" content={permalink} />
+<link rel="canonical" href={permalink} />
+
+<link rel="icon" type="image/svg+xml" href="/img/syff-favicon.svg" />
+<meta name="generator" content={Astro.generator} />

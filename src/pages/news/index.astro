@@ -1,0 +1,48 @@
+---
+import "../../css/styles.css";
+import Navigation from "../../components/Navigation.astro";
+import Footer from "../../components/Footer.astro";
+import Font from "../../components/Font.astro";
+import Seo from "../../components/Seo.astro";
+
+const title = "News • Scottish Youth Film Foundation";
+const description =
+  "The Scottish Youth Film Foundation is a charity that aims to improve the life outcomes of young people in Scotland through film. We do this through our annual festival, through film education in schools, and through Outreach film projects that target young people who would not normally have an opportunity to make a film.";
+const permalink = "https://syff.scot/news";
+const image = "https://syff.scot/img/syff-social-share.png";
+const alt = "Scottish Youth Film Foundation";
+const type = "article";
+---
+
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <Font />
+
+    <Seo
+      title={title}
+      description={description}
+      permalink={permalink}
+      image={image}
+      alt={alt}
+      type={type}
+    />
+  </head>
+  <body id="top">
+    <Navigation />
+
+    <main id="content">
+      <section class="container">
+        <h1 class="headline">News</h1>
+        <p class="lede">The lastest updates from the team at SYFF.</p>
+        <ul>
+          <li><a href="/news/good-crieff">Good Crieff!</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>

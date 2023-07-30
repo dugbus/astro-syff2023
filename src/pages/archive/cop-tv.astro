@@ -1,0 +1,59 @@
+---
+import "../../css/styles.css";
+import Navigation from "../../components/Navigation.astro";
+import Footer from "../../components/Footer.astro";
+import VimeoEmbed from "../../components/VimeoEmbed.astro";
+import Font from "../../components/Font.astro";
+import Seo from "../../components/Seo.astro";
+
+const title = "COP TV • Scottish Youth Film Foundation";
+const description =
+  "The Scottish Youth Film Foundation is a charity that aims to improve the life outcomes of young people in Scotland through film. We do this through our annual festival, through film education in schools, and through Outreach film projects that target young people who would not normally have an opportunity to make a film.";
+const permalink = "https://syff.scot/archive/cop-tv";
+const image = "https://syff.scot/img/syff-social-share.png";
+const alt = "Scottish Youth Film Foundation";
+const type = "article";
+---
+
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <Font />
+
+    <Seo
+      title={title}
+      description={description}
+      permalink={permalink}
+      image={image}
+      alt={alt}
+      type={type}
+    />
+  </head>
+  <body id="top">
+    <Navigation />
+
+    <main id="content">
+      <section class="container narrow">
+        <h1 class="headline">COP TV</h1>
+        <p class="lede">
+          Our most ambitious project to date. In 2021 we recruited and trained a
+          group of young Scots and embedded them as video journalists at COP 26.
+          For the final five nights of COP, they broadcast a 1-hour show
+          featuring pre-recorded content, in-studio interviews, a daily round up
+          and even recipe ideas. We were partnered and supported by
+          ScottishPower, the New York Times, the Redford Center and many more
+          organisations and individuals.
+        </p>
+        <p>
+          The story of COP TV is chronicled in the documentary, This is COP TV,
+          which can be viewed below.
+        </p>
+        <VimeoEmbed videoId="722996085" />
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>
