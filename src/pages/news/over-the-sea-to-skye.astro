@@ -1,0 +1,107 @@
+---
+import "../../css/styles.css";
+import Navigation from "../../components/Navigation.astro";
+import Footer from "../../components/Footer.astro";
+import Font from "../../components/Font.astro";
+import Seo from "../../components/Seo.astro";
+
+const title = "Over The Sea To Skye • Scottish Youth Film Foundation";
+const description =
+  "It’s more speed bonny bridge than speed bonny boat these days but we finally managed to get an outreach project on Skye thanks to our partners at Muirhall energy. As is the way of these things our team had to assemble at Portree High School from their residences all over the island - and for some of them it was a fair commute every morning.";
+const permalink = "https://syff.scot/news/over-the-sea-to-skye";
+const image = "https://syff.scot/img/syff-social-share.png";
+const alt = "Scottish Youth Film Foundation";
+const type = "article";
+---
+
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <Font />
+
+    <Seo
+      title={title}
+      description={description}
+      permalink={permalink}
+      image={image}
+      alt={alt}
+      type={type}
+    />
+  </head>
+  <body id="top">
+    <Navigation />
+
+    <main id="content">
+      <section class="container narrow">
+        <h1 class="headline">Over the sea to Skye</h1>
+        <p class="lede">
+          It’s more speed bonny bridge than speed bonny boat these days but we
+          finally managed to get an outreach project on Skye thanks to our
+          partners at Muirhall Energy. As is the way of these things our team
+          had to assemble at Portree High School from their residences all over
+          the island - and for some of them it was a fair commute every morning.
+        </p>
+
+        <figure class="figure">
+          <video class="video" controls>
+            <source src="/video/skye-bts-clip.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>shot planning during our time on Skye</figcaption>
+        </figure>
+        <p>
+          We were there for a week and had only had the chance to visit once
+          beforehand so there was still a lot of writing to be done before we
+          got to filming. But write we did and the crew came up with what one
+          person called an ‘ambitious’ idea – More of that later.
+        </p>
+
+        <figure class="figure">
+          <img
+            src="/img/filming-on-skye.jpg"
+            alt="learning to tell an effective story filming on Skye"
+          />
+          <figcaption>
+            learning to tell an effective story filming on Skye
+          </figcaption>
+        </figure>
+
+        <p>
+          It started out as a horror but along the way the team decided that
+          they wanted to make a point about something that affects teenagers and
+          we won’t spoil it by revealing the plot here. Safe to say that
+          ambitious was exactly the right word. The young film makers even
+          managed to tell a story that didn’t depend on Skye’s stunning
+          landscape but still managed to incorporate a small bit into the
+          message right at the end.
+        </p>
+
+        <p>
+          The film is currently going through edits and we’ll share it here
+          after the festival on Sept 30th.
+        </p>
+
+        <figure class="figure">
+          <img
+            src="/img/old-man-of-storr.jpg"
+            alt="Old Man of Storr hiding in the mists"
+          />
+          <figcaption>Old Man of Storr hiding in the mists</figcaption>
+        </figure>
+
+        <p>
+          And who was it that called it ‘ambitious’ – Only Douglas Mackinnon –
+          famous director of Good Omens amongst other things. He dropped in for
+          the day and helped out our director Willow on one of the most powerful
+          scenes in the piece. Given that Douglas works on high end tv with
+          budgets in the millions we felt understandably chuffed when he gave
+          his opinion.
+        </p>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>

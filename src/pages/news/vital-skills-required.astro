@@ -1,0 +1,97 @@
+---
+import "../../css/styles.css";
+import Navigation from "../../components/Navigation.astro";
+import Footer from "../../components/Footer.astro";
+import Font from "../../components/Font.astro";
+import Seo from "../../components/Seo.astro";
+
+const title = "Vital Skills Required • Scottish Youth Film Foundation";
+const description =
+  "Running a film charity can be lots of fun as you will have noticed from our other blog posts. We get to travel around a bit and meet lots of energetic young people and we get to be part of telling some amazing stories (as well as some truly bonkers ones) as we go along.";
+const permalink = "https://syff.scot/news/vital-skills-required";
+const image = "https://syff.scot/img/syff-social-share.png";
+const alt = "Scottish Youth Film Foundation";
+const type = "article";
+---
+
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <Font />
+
+    <Seo
+      title={title}
+      description={description}
+      permalink={permalink}
+      image={image}
+      alt={alt}
+      type={type}
+    />
+  </head>
+  <body id="top">
+    <Navigation />
+
+    <main id="content">
+      <section class="container narrow">
+        <h1 class="headline">Vital Skills Required</h1>
+        <p class="lede">
+          Running a film charity can be lots of fun as you will have noticed
+          from our other blog posts. We get to travel around a bit and meet lots
+          of energetic young people and we get to be part of telling some
+          amazing stories (as well as some truly bonkers ones) as we go along.
+          So you won’t catch us grumbling. It beats some of the jobs we’ve had
+          in the past. But when all is said and done we are hardly the emergency
+          services, we’re not exactly Médecins sans Frontieres. This isn’t a
+          first responder situation and we freely admit that no one ever
+          interrupted a play shouting ‘Is there a director of photography in the
+          house?!’
+        </p>
+
+        <p>
+          But more than being a film charity we are an education charity. The
+          new skills being sought by the screen industry are actually the new
+          skills being sought by all industries. We were reminded of this
+          through an article in the Guardian.
+        </p>
+
+        <p>
+          <a
+            href="https://www.theguardian.com/commentisfree/2023/jul/27/why-we-must-teach-our-
+          teenagers-to-break-free-of-fear-and-fight-for-creative-freedom"
+            target="_blank"
+            >https://www.theguardian.com/commentisfree/2023/jul/27/why-we-must-teach-our-
+            teenagers-to-break-free-of-fear-and-fight-for-creative-freedom</a
+          >
+        </p>
+
+        <p>
+          There is a growing consensus that the skills of the future are things
+          like creativity, communication, problem solving and teamwork and that
+          people entering the workplace today are more likely to have seven
+          careers than just the one. Across all those careers there will be
+          greater emphasis on what are called ‘fusion’ skills like initiative,
+          adaptability and a capacity for critical thinking.
+        </p>
+        <p>
+          And what undertaking do we know that involves a need for great group
+          work alongside independence of thought? We’ll be expanding in the next
+          two years as we try to bring our type of education to every young
+          person that wants it.
+        </p>
+        <p>
+          For those interested in hearing more there’s also the late, great Sir
+          Ken Robinson.
+        </p>
+
+        <p>
+          <a href="https://www.youtube.com/watch?v=iG9CE55wbtY" target="_blank"
+            >https://www.youtube.com/watch?v=iG9CE55wbtY</a>
+        </p>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>

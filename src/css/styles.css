@@ -163,9 +163,12 @@ img {
 
 .hero img {
   object-fit: cover;
-  object-position: bottom;
+  object-position: top;
   aspect-ratio: 16 / 9;
+  max-width: 1440px;
   width: 100%;
+  margin: 0 auto;
+  display: block;
 }
 
 .headline {
