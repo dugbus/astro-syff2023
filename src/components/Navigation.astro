@@ -17,7 +17,7 @@ import sprites from "../img/syff-sprites.svg";
       <a href="/">Home</a>
     </li>
     <li>
-      <a href="/news">News</a>
+      <a href="/news/">News</a>
     </li>
     <li class="has-dropdown">
       <a href="#"
@@ -27,19 +27,19 @@ import sprites from "../img/syff-sprites.svg";
       >
       <ul>
         <li>
-          <a href="/history-of-syff">History of SYFF</a>
+          <a href="/history-of-syff/">History of SYFF</a>
         </li>
         <li>
-          <a href="/story-of-syff">Story of SYFF</a>
+          <a href="/story-of-syff/">Story of SYFF</a>
         </li>
         <li>
-          <a href="/our-staff">Our Staff</a>
+          <a href="/our-staff/">Our Staff</a>
         </li>
         <li>
-          <a href="/our-board">Our Board</a>
+          <a href="/our-board/">Our Board</a>
         </li>
         <li>
-          <a href="/our-patrons">Our Patrons</a>
+          <a href="/our-patrons/">Our Patrons</a>
         </li>
       </ul>
     </li>
@@ -51,24 +51,24 @@ import sprites from "../img/syff-sprites.svg";
       >
       <ul>
         <li>
-          <a href="/festival">Festival</a>
+          <a href="/festival/">Festival</a>
         </li>
         <li>
-          <a href="/outreach">Outreach</a>
+          <a href="/outreach/">Outreach</a>
         </li>
         <li>
-          <a href="/education">Education</a>
+          <a href="/education/">Education</a>
         </li>
         <li>
-          <a href="/archive">Archive</a>
+          <a href="/archive/">Archive</a>
         </li>
       </ul>
     </li>
     <li>
-      <a href="/into-the-industry">Into The Industry</a>
+      <a href="/into-the-industry/">Into The Industry</a>
     </li>
     <li>
-      <a href="/contact">Contact</a>
+      <a href="/contact/">Contact</a>
     </li>
   </ul>
   <div class="hamburger">
@@ -84,10 +84,7 @@ import sprites from "../img/syff-sprites.svg";
 <style>
   nav {
     --container-padding: 0;
-    padding-inline: max(
-      var(--container-edge),
-      calc(50% - var(--container-width) / 2)
-    );
+    padding-inline: max(2rem, calc(50% - var(--container-width) / 2));
     padding-block: var(--container-padding);
     background-color: var(--color-white);
     display: flex;
@@ -109,19 +106,19 @@ import sprites from "../img/syff-sprites.svg";
     bottom: 0;
     box-sizing: border-box;
     color: white;
-    right: 0;
+    left: 0;
     padding: 0 2rem 2rem;
     position: fixed;
     top: 0;
-    transform: translate(100%);
+    transform: translate(-100%);
     transition: transform var(--transition-time);
     width: 50%;
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: auto;
   }
 
   nav > ul.is-open {
@@ -149,6 +146,10 @@ import sprites from "../img/syff-sprites.svg";
     white-space: nowrap;
     position: relative;
     z-index: 1;
+  }
+
+  nav li a {
+    padding: 1.25rem 1.25rem;
   }
 
   nav li a:focus-within,
@@ -183,6 +184,11 @@ import sprites from "../img/syff-sprites.svg";
     color: var(--color-ink);
   }
 
+  .hamburger.is-open a,
+  .hamburger.is-open svg {
+    color: var(--color-white);
+  }
+
   .has-dropdown {
     position: relative;
   }
@@ -194,14 +200,12 @@ import sprites from "../img/syff-sprites.svg";
   }
 
   .has-dropdown ul {
-    position: absolute;
-    display: none;
     box-shadow: 0 0 1rem rgba(0 0 0 / 30%);
     padding: 0;
   }
 
   .has-dropdown li {
-    background: var(--color-white);
+    background: rgba(255 255 255 / 10%);
   }
 
   .has-dropdown li::after {
@@ -210,12 +214,13 @@ import sprites from "../img/syff-sprites.svg";
 
   .has-dropdown li a {
     padding: 1.25rem 1.25rem;
+    font-size: 0.75rem;
   }
 
-  .has-dropdown:focus ul,
+  .has-dropdown:hover ul,
   .has-dropdown:focus-within ul,
-  .has-dropdown ul:focus,
-  .has-dropdown ul:focus-within {
+  .has-dropdown ul:hover,
+  .has-dropdown ul:focus {
     display: block;
   }
 
@@ -223,12 +228,20 @@ import sprites from "../img/syff-sprites.svg";
     .hamburger {
       display: none;
     }
+    nav {
+      padding-inline: max(
+        var(--container-edge),
+        calc(50% - var(--container-width) / 2)
+      );
+    }
     nav > ul {
       background-color: transparent;
       flex-direction: row;
       transform: none;
       position: static;
       width: auto;
+      overflow: initial;
+      display: flex;
     }
     nav li::after {
       content: "";
@@ -246,6 +259,19 @@ import sprites from "../img/syff-sprites.svg";
     }
     nav li a {
       color: var(--color-ink);
+      padding: 2.25rem 1.25rem;
+    }
+    .has-dropdown ul {
+      position: absolute;
+      display: none;
+      box-shadow: 0 0 1rem rgba(0 0 0 / 30%);
+      padding: 0;
+    }
+    .has-dropdown li {
+      background: var(--color-white);
+    }
+    .has-dropdown li a {
+      font-size: 0.875rem;
     }
   }
 </style>
