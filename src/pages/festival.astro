@@ -4,6 +4,7 @@ import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import Font from "../components/Font.astro";
 import VimeoEmbed from "../components/VimeoEmbed.astro";
+import YouTubeEmbed from "../components/YouTubeEmbed.astro";
 import SwiperSlides from "../components/SwiperSlides.astro";
 import Seo from "../components/Seo.astro";
 
@@ -36,7 +37,10 @@ const type = "article";
     <Navigation />
 
     <header class="hero">
-      <img src="/img/festival-hero.jpg" alt="panel onstage at the festival" />
+      <img
+        src="/img/winners-and-shortlisted-filmmakers-2023.jpg"
+        alt="winners and shortlisted filmmakers 2023"
+      />
     </header>
 
     <main id="content">
@@ -44,60 +48,100 @@ const type = "article";
         <h1 class="headline">Festival</h1>
 
         <p class="lede">
-          Our annual festival is a celebration of the creativity of
-          Scotland&rsquo;s young filmmakers. Each year, we screen the best films
-          shortlisted from work submitted from across the country and give out
-          awards for best live action, documentary and animation films for age
-          ranges 12 and under and 13-19.
+          The 9<sup>th</sup> Annual Scottish Youth Film Festival took place in Perth
+          on September 30<sup>th</sup>.
         </p>
 
         <p>
-          The festival is also an opportunity for young people to get hands on
-          experience of film making and to find out more about film as a career.
-          We host panels, talks, how to sessions, practical animation and film
-          making sessions with industry professionals from across the myriad
-          jobs in the film and TV industries. Since inception we have had
-          actors, directors, stunt people, visual effects technicians, hair and
-          make up artists, 3D specialists, sound designers, animators and many
-          more.
+          200 young people joined us for an inspiring day of workshops,
+          discussions and screenings with guests from across the world of Film
+          and TV including Directors Raisah Ahmed and Andrew Cumming, SYFF
+          patrons Sara Vickers and Andy Rothney and many, many more.
         </p>
 
-        <p>And all of this is provided free of charge.</p>
+        <p>
+          We had practical demos of sound effects from Krotos, animation
+          Director Will Adams of Wild Child talking about his work and hands-on
+          sessions on special effects and animation as well as an all day acting
+          workshop.
+        </p>
 
         <p>
-          <a
-            class="btn"
-            href="/img/Scottish Youth Film Festival 2023 - Programme.pdf"
-            >Full Programme</a
+          This annual Awards show was our best year, with a superb array of
+          shortlisted films from across Scotland and all of the winners in the
+          room to receive their trohies.
+        </p>
+      </section>
+
+      <section class="container quote" style="color: #fff">
+        <h2 style="color: var(--color-lime);">Winners 2023</h2>
+
+        <p style="font-weight:normal">
+          Best Doc 12 and Under - <strong>My Tour of Rathlin Island</strong>
+        </p>
+
+        <p style="font-weight:normal">
+          Best Animation 12 and Under - <strong
+            >William Wallace - An Untold Story</strong
           >
         </p>
 
-        <p>
-          This year's Scottish Youth Film Festival will be held on Saturday 30th
-          September at North Inch Community Campus in Perth.
+        <p style="font-weight:normal">
+          Best Live Action 12 and Under - <strong>Use it or Lose it</strong>
         </p>
 
-        <p>
-          <a
-            class="btn"
-            href="https://www.eventbrite.com/e/scottish-youth-film-festival-tickets-694647468277?aff=oddtdtcreator"
-            >Book Now!</a
-          >
+        <p style="font-weight:normal">
+          Best Film 12 and Under - <strong>Use it of Lose it</strong>
         </p>
 
-        <figure class="figure">
-          <img
-            src="/img/festival-schedule-2023.jpg"
-            alt="the schedule for SYFF 2023 in Perth"
-          />
-          <figcaption>
-            The schedule for SYFF 2023 at North Inch Community Campus in Perth
-          </figcaption>
-        </figure>
+        <p style="font-weight:normal">
+          Best Doc 13-19 - Socks - <strong>A Sockumentary</strong>
+        </p>
+
+        <p style="font-weight:normal">
+          Best Animation 13-19 - <strong>Bored Games</strong>
+        </p>
+
+        <p style="font-weight:normal">
+          Best Live Action 13-19 - <strong>Boy meets Bear meets Dracula</strong>
+        </p>
+
+        <p style="font-weight:normal">
+          AMES Award - Nat 5 - <strong>All they found was the camera</strong>
+        </p>
+
+        <p style="font-weight:normal">
+          AMES Award - Higher Media - <strong>The Dunmore Project</strong>
+        </p>
+      </section>
+
+      <section class="container">
+        <h2>You can watch the winning films here</h2>
+
+        <div class="grid">
+          <VimeoEmbed videoId="870697006" />
+
+          <VimeoEmbed videoId="870695874" />
+        </div>
       </section>
 
       <section class="container narrow bg-light-grey">
-        <VimeoEmbed videoId="858643447" />
+        <h2>PKTV</h2>
+        <p>
+          We rounded off the day with our PKTV team broadcasting live for the
+          festival. You can watch their Friday and Saturday shows here, with
+          interviews featuring writer Neil Forsyth, SYFF patrons Jack Lowden,
+          Sara Vickers and Hiftu Quasem and an interview with the one and only
+          Alan Cumming.
+        </p>
+      </section>
+
+      <section class="container bg-light-grey">
+        <div class="grid">
+          <YouTubeEmbed videoId="pBNYCurgtHc" />
+
+          <YouTubeEmbed videoId="AtcKVlXVE38" />
+        </div>
       </section>
 
       <section class="container narrow">
