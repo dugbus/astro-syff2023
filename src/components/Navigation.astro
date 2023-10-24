@@ -1,12 +1,12 @@
 ---
-import logo from "../img/syff-logo.svg";
-import sprites from "../img/syff-sprites.svg";
+//import logo from "https://syff.scot/img/syff-logo.svg";
+//import sprites from "https://syff.scot/img/syff-sprites.svg";
 ---
 
 <nav role="navigation" aria-label="main navigation">
   <a href="/"
     ><img
-      src={logo}
+      src="/img/syff-logo.svg"
       width="160"
       height="64"
       alt="Scottish Youth Film Foundation"
@@ -22,7 +22,7 @@ import sprites from "../img/syff-sprites.svg";
     <li class="has-dropdown">
       <a href="#"
         >Who We Are <svg class="icon">
-          <use xlink:href={`${sprites}#down-arrow`}></use>
+          <use href="/img/syff-sprites.svg#down-arrow"></use>
         </svg></a
       >
       <ul>
@@ -46,7 +46,7 @@ import sprites from "../img/syff-sprites.svg";
     <li class="has-dropdown">
       <a href="#"
         >What We Do <svg class="icon">
-          <use xlink:href={`${sprites}#down-arrow`}></use>
+          <use href="/img/syff-sprites.svg#down-arrow"></use>
         </svg></a
       >
       <ul>
@@ -74,7 +74,7 @@ import sprites from "../img/syff-sprites.svg";
   <div class="hamburger">
     <a href="#">
       <svg class="icon">
-        <use xlink:href={`${sprites}#hamburger`}></use>
+        <use href="/img/syff-sprites.svg#hamburger"></use>
       </svg>
       MENU
     </a>
