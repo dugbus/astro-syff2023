@@ -1,0 +1,201 @@
+---
+import "../../css/styles.css";
+import Navigation from "../../components/Navigation.astro";
+import Footer from "../../components/Footer.astro";
+import Font from "../../components/Font.astro";
+import VimeoEmbed from "../../components/VimeoEmbed.astro";
+import YouTubeEmbed from "../../components/YouTubeEmbed.astro";
+import SwiperSlides from "../../components/SwiperSlides.astro";
+import Seo from "../../components/Seo.astro";
+
+const title = "Festival 2023 • Scottish Youth Film Foundation";
+const description =
+  "The Scottish Youth Film Festival is a celebration of the creativity of Scotland’s young filmmakers. Each year, we screen the best films shortlisted from work submitted from across the country and give out awards for best live action, documentary and animation films for age ranges 12 and under and 13-19. Everything is free of charge and there’s workshops, panels and talks with industry professionals, where you can get some hands-on experience of film no matter what your experience level… come along and have a go!";
+const permalink = "https://syff.scot/festival/";
+const image = "https://syff.scot/img/syff-social-share.png";
+const alt = "Scottish Youth Film Foundation";
+const type = "article";
+---
+
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <Font />
+
+    <Seo
+      title={title}
+      description={description}
+      permalink={permalink}
+      image={image}
+      alt={alt}
+      type={type}
+    />
+  </head>
+  <body id="top">
+    <Navigation />
+
+    <header class="hero">
+      <img
+        src="/img/winners-and-shortlisted-filmmakers-2023.jpg"
+        alt="winners and shortlisted filmmakers 2023"
+      />
+    </header>
+
+    <main id="content">
+      <section class="container narrow">
+        <h1 class="headline">Festival 2023</h1>
+
+        <p class="lede">
+          The 9<sup>th</sup> Annual Scottish Youth Film Festival took place in Perth
+          on September 30<sup>th</sup>.
+        </p>
+
+        <p>
+          200 young people joined us for an inspiring day of workshops,
+          discussions and screenings with guests from across the world of Film
+          and TV including Directors Raisah Ahmed and Andrew Cumming, SYFF
+          patrons Sara Vickers and Andy Rothney and many, many more.
+        </p>
+
+        <p>
+          We had practical demos of sound effects from Krotos, animation
+          Director Will Adams of Wild Child talking about his work and hands-on
+          sessions on special effects and animation as well as an all day acting
+          workshop.
+        </p>
+
+        <p>
+          This annual Awards show was our best year, with a superb array of
+          shortlisted films from across Scotland and all of the winners in the
+          room to receive their trohies.
+        </p>
+      </section>
+
+      <section class="container quote" style="color: #fff">
+        <h2 style="color: var(--color-lime);">Winners 2023</h2>
+
+        <p style="font-weight:normal">
+          Best Doc 12 and Under - <strong>My Tour of Rathlin Island</strong>
+        </p>
+
+        <p style="font-weight:normal">
+          Best Animation 12 and Under - <strong
+            >William Wallace - An Untold Story</strong
+          >
+        </p>
+
+        <p style="font-weight:normal">
+          Best Live Action 12 and Under - <strong>Use it or Lose it</strong>
+        </p>
+
+        <p style="font-weight:normal">
+          Best Film 12 and Under - <strong>Use it of Lose it</strong>
+        </p>
+
+        <p style="font-weight:normal">
+          Best Doc 13-19 - Socks - <strong>A Sockumentary</strong>
+        </p>
+
+        <p style="font-weight:normal">
+          Best Animation 13-19 - <strong>Bored Games</strong>
+        </p>
+
+        <p style="font-weight:normal">
+          Best Live Action 13-19 - <strong>Boy meets Bear meets Dracula</strong>
+        </p>
+
+        <p style="font-weight:normal">
+          AMES Award - Nat 5 - <strong>All they found was the camera</strong>
+        </p>
+
+        <p style="font-weight:normal">
+          AMES Award - Higher Media - <strong>The Dunmore Project</strong>
+        </p>
+      </section>
+
+      <section class="container">
+        <h2>You can watch the winning films here</h2>
+
+        <div class="grid">
+          <VimeoEmbed videoId="870697006" />
+
+          <VimeoEmbed videoId="870695874" />
+        </div>
+      </section>
+
+      <section class="container narrow bg-light-grey">
+        <h2>PKTV</h2>
+        <p>
+          We rounded off the day with our PKTV team broadcasting live for the
+          festival. You can watch their Friday and Saturday shows here, with
+          interviews featuring writer Neil Forsyth, SYFF patrons Jack Lowden,
+          Sara Vickers and Hiftu Quasem and an interview with the one and only
+          Alan Cumming.
+        </p>
+      </section>
+
+      <section class="container bg-light-grey">
+        <div class="grid">
+          <YouTubeEmbed videoId="pBNYCurgtHc" />
+
+          <YouTubeEmbed videoId="AtcKVlXVE38" />
+        </div>
+      </section>
+
+      <section class="container narrow">
+        <h2 class="text-center">Praise For The Festival</h2>
+
+        <SwiperSlides>
+          <div class="swiper-slide">
+            <blockquote class="small-quote">
+              <p>
+                “Professional, heartwarming and planting seeds for the future in
+                so many ways.”
+                <span>- Tim Flood, Filmmaker</span>
+              </p>
+            </blockquote>
+          </div>
+
+          <div class="swiper-slide">
+            <blockquote class="small-quote">
+              <p>
+                “This is a great film festival for young people, it does not try
+                to be grand or exclusive. It encourages all the young people it
+                can reach, to take part and learn something or take something
+                positive away.”
+                <span>- Lee Vann Wakelin, Filmmaker</span>
+              </p>
+            </blockquote>
+          </div>
+
+          <div class="swiper-slide">
+            <blockquote class="small-quote">
+              <p>
+                “All the young people I've worked with, whose films have
+                featured in the festival, really get a lot out of taking part.
+                Well done to everyone involved in making this a highlight of the
+                year in film education in Scotland.”
+                <span>- Kevin Cameron, Filmmaker</span>
+              </p>
+            </blockquote>
+          </div>
+
+          <div class="swiper-slide">
+            <blockquote class="small-quote">
+              <p>
+                First class. Not just a film festival. Two days crammed full of
+                lots of young film students taking advantage of high quality
+                workshops prior to the awards. Brilliant idea.”
+                <span>- Graham Kitchener, Filmmaker</span>
+              </p>
+            </blockquote>
+          </div>
+        </SwiperSlides>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>
