@@ -70,6 +70,26 @@
     <li>
       <a href="/contact/">Contact</a>
     </li>
+    <li>
+      <form action="https://www.paypal.com/donate" method="post" target="_top">
+        <input type="hidden" name="hosted_button_id" value="SQDTMLUJPEPFN" />
+        <input
+          class="btn btn-donate"
+          type="submit"
+          name="submit"
+          title="PayPal - The safer, easier way to pay online!"
+          alt="Donate with PayPal button"
+          value="DONATE"
+        />
+        <img
+          alt=""
+          border="0"
+          src="https://www.paypal.com/en_GB/i/scr/pixel.gif"
+          width="1"
+          height="1"
+        />
+      </form>
+    </li>
   </ul>
   <div class="hamburger">
     <a href="#">
@@ -169,6 +189,18 @@
     color: var(--color-white);
     background-color: var(--color-teal);
     outline: 0;
+  }
+
+  nav .btn-donate {
+    font-size: 0.875rem;
+    font-weight: 700;
+    border-style: none;
+    cursor: pointer;
+    margin-block: 1.625rem;
+  }
+
+  nav > ul.is-open .btn-donate {
+    margin-block: 0.5rem 1.5rem;
   }
 
   .hamburger a {
