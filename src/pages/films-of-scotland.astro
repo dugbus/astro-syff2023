@@ -1,0 +1,177 @@
+---
+import "../css/styles.css";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import VimeoEmbed from "../components/VimeoEmbed.astro";
+import Font from "../components/Font.astro";
+import Seo from "../components/Seo.astro";
+
+const title = "Films of Scotland • Scottish Youth Film Foundation";
+const description =
+    "The Scottish Youth Film Foundation is a charity that aims to improve the life outcomes of young people in Scotland through film. We do this through our annual festival, through film education in schools, and through Outreach film projects that target young people who would not normally have an opportunity to make a film.";
+const permalink = "https://syff.scot/films-of-scotland/";
+const image = "https://syff.scot/img/syff-social-share.png";
+const alt = "Scottish Youth Film Foundation";
+const type = "article";
+---
+
+<html lang="en-GB">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <Font />
+
+        <Seo
+            title={title}
+            description={description}
+            permalink={permalink}
+            image={image}
+            alt={alt}
+            type={type}
+        />
+    </head>
+    <body id="top">
+        <Navigation />
+
+        <header class="hero">
+            <img
+                src="/img/films-of-scotland.jpg"
+                alt="Films of Scotland vintage splash screen"
+            />
+        </header>
+
+        <main id="content">
+            <section class="container narrow">
+                <h1 class="headline">Films of Scotland</h1>
+
+                <p class="lede">Calling Scotland’s young filmmakers!</p>
+
+                <p class="lede">
+                    Are you aged 26 and under? We want to see your films about
+                    today’s Scotland. The culture, the landscape, the people,
+                    the food... whatever inspires you.
+                </p>
+
+                <p>
+                    We’re looking for your films about modern day Scotland. They
+                    can be about any subject you like and can be in any form,
+                    documentary, animation, drama, experimental… They should be
+                    five minutes or under and deadline for submissions is 31st
+                    January 2025.
+                </p>
+
+                <p>
+                    Submission is completely free. Head to the Film Freeway page
+                    to upload your film -
+                    <a
+                        href="https://filmfreeway.com/filmsofscotland"
+                        target="_blank"
+                        >https://filmfreeway.com/filmsofscotland</a
+                    >
+                </p>
+
+                <p>
+                    The best films will be shortlisted and shown at a special
+                    event in March 2025 in the National Museum of Scotland in
+                    Chambers Street, and prizes awarded. Winning films will be
+                    placed in the National Library of Scotland Moving Image
+                    Archive, as part of Scotland’s story for future generations.
+                </p>
+
+                <p>
+                    Our competition is inspired by the original Films of
+                    Scotland, which ran from 1938 until 1982.
+                </p>
+
+                <VimeoEmbed videoId="990508309" />
+                <br />
+                <h2>The Original Films of Scotland</h2>
+
+                <p>
+                    Back in 1938, the Empire Exhibition was held in Glasgow and
+                    to promote Scotland, a committee was formed and 7 films were
+                    commissioned to showcase Scotland. These initial Films of
+                    Scotland were seen by vast audiences both nationally and
+                    internationally.
+                </p>
+
+                <p>
+                    Films of Scotland re-formed after the war and ran until
+                    1982. Well known Scottish filmmakers like Bill Forsyth,
+                    Charlie Gormley, Murray Grigor and Iain Smith worked on
+                    them, and they form an incredible archive of Scotland's
+                    moving image culture.
+                </p>
+
+                <p>
+                    You can find out more about the original Films of Scotland,
+                    and watch the films here:
+                    <a
+                        href="https://www.nls.uk/exhibitions/cinema/films-of-scotland/"
+                        target="_blank"
+                        >https://www.nls.uk/exhibitions/cinema/films-of-scotland/</a
+                    >
+                </p>
+
+                <p>
+                    The clips below are from some of the original films and you
+                    can download and use them for your own films if you’d like.
+                </p>
+
+                <p class="lede">
+                    We want the voices of Scotland’s young people to form the
+                    reimagined Films of Scotland for the modern age. Don’t miss
+                    your chance to be a part of an exciting time in Scotland’s
+                    film history!
+                </p>
+            </section>
+
+            <section
+                class="container"
+                style="background-color: var(--color-light-grey);"
+            >
+                <div class="grid links">
+                    <div>
+                        <img
+                            style="margin-bottom: 0;"
+                            class="shadow"
+                            src="/img/films-of-scotland-poster.jpg"
+                            alt="Films of Scotland poster English"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            style="margin-bottom: 0;"
+                            class="shadow"
+                            src="/img/films-of-scotland-gaelic.jpg"
+                            alt="Films of Scotland poster Gaelic"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            style="margin-bottom: 0;"
+                            class="shadow"
+                            src="/img/films-of-scotland-scots.jpg"
+                            alt="Films of Scotland poster Scots"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <section class="container narrow">
+                <VimeoEmbed videoId="553398723" />
+
+                <VimeoEmbed videoId="553396746" />
+
+                <VimeoEmbed videoId="553397864" />
+
+                <VimeoEmbed videoId="553396002" />
+
+                <VimeoEmbed videoId="553395623" />
+            </section>
+        </main>
+
+        <Footer />
+    </body>
+</html>
