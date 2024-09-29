@@ -23,3 +23,5 @@ pnpm-debug.log*
 public/img/
 
 public/video/
+
+public/audio/
