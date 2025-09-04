@@ -410,6 +410,14 @@ img {
   }
 }
 
+.scf {
+  text-align: center;
+}
+
+.scf img {
+  max-width: 20rem;
+}
+
 .funders {
   display: grid;
   grid-template-columns: 1fr 1fr;
